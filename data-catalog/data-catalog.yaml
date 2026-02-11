@@ -339,7 +339,7 @@ datasets:
       The type of transmission technology is specified for each interconnection, indicating whether it is overhead, subsea, or a combination of overhead and subsea.
 
     publisher:
-      name: University College Dublin
+      name: https://people.ucd.ie/muhammad.numan[University College Dublin]
     contactPoint:
       hasEmail: info@tools-for-energy-system-modelling.org
     issued: 2024-12-16
@@ -392,11 +392,11 @@ datasets:
 
 
 
-series:
-  - identifier: mopo-eu:abcde
-    title: all the datasets by this publisher
-    publisher:
-      name: My name
+# series:
+#   - identifier: mopo-eu:abcde
+#     title: all the datasets by this publisher
+#     publisher:
+#       name: My name
 
 
 concepts:
