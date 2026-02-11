@@ -13,7 +13,7 @@ dataCatalog:
   issued: 2026-02-11
 
 datasets:
-  - identifier: ex:herrcgre
+  - identifier: mopo-eu:herrcgre
     title: test dataset
     publisher:
       name : my name
@@ -31,8 +31,8 @@ datasets:
       hasEnd: 2025-12-31  
     inSeries: ex:abcde
     hasPolicy: plcy:open-information-policy
-    
-  - identifier: zenodo:10.5281/zenodo.18593680
+
+  - identifier: mopo-eu:10.5281/zenodo.18593680
     title: Pan-European Dataset for Energy System Planning
     description: |
       Comprehensive dataset for pan-European energy system planning covering sectors including Variable Renewable Energy, Hydro, Biomass, Energy conversion and storage, Electricity transmission, Methane and hydrogen, Cargo transport, Industry (chemicals, glass, fertilisers, refineries, cement, steel), Buildings (heating and cooling), and Transport. The dataset is designed to be opened through SpineToolbox.
@@ -66,121 +66,121 @@ series:
 
 
 concepts:
-  - identifier: ex:energy
+  - identifier: mopo-eu:energy
     prefLabel: Energy
     definition: Energy resources and systems for power generation, transmission, and consumption.
 
-  - identifier: ex:pan-european
+  - identifier: mopo-eu:pan-european
     prefLabel: Pan-European
     definition: Covering the entire European region or multiple European countries.
 
-  - identifier: ex:spine-toolbox
+  - identifier: mopo-eu:spine-toolbox
     prefLabel: Spine Toolbox
     definition: Open-source energy system modeling framework and toolset.
 
-  - identifier: ex:solar-power
+  - identifier: mopo-eu:solar-power
     prefLabel: Solar Power
     definition: Electricity generated from sunlight using photovoltaic cells or concentrated solar power.
     altLabel: PV
 
-  - identifier: ex:wind-power
+  - identifier: mopo-eu:wind-power
     prefLabel: Wind Power
     definition: Electricity generated from wind using turbines.
 
-  - identifier: ex:climate-change
+  - identifier: mopo-eu:climate-change
     prefLabel: Climate Change
     definition: Long-term shifts in global temperatures and weather patterns.
 
-  - identifier: ex:building-stock
+  - identifier: mopo-eu:building-stock
     prefLabel: Building Stock
     definition: The aggregate of buildings in a given region, including their characteristics and energy performance.
 
-  - identifier: ex:heat-demand
+  - identifier: mopo-eu:heat-demand
     prefLabel: Heat Demand
     definition: Energy required for space heating and hot water in buildings.
 
-  - identifier: ex:district-heating
+  - identifier: mopo-eu:district-heating
     prefLabel: District Heating
     definition: Centralized heat distribution system serving multiple buildings.
 
-  - identifier: ex:europe
+  - identifier: mopo-eu:europe
     prefLabel: Europe
     definition: The continent of Europe or European Union member states.
 
-  - identifier: ex:transport
+  - identifier: mopo-eu:transport
     prefLabel: Transport
     definition: Movement of goods and people, including infrastructure and vehicles.
 
-  - identifier: ex:hydrogen
+  - identifier: mopo-eu:hydrogen
     prefLabel: Hydrogen
     definition: Hydrogen as an energy carrier and fuel.
 
-  - identifier: ex:carbon-dioxide
+  - identifier: mopo-eu:carbon-dioxide
     prefLabel: Carbon Dioxide
     definition: CO2 as a greenhouse gas and substance for transport and storage.
     altLabel: CO2
 
-  - identifier: ex:cost-model
+  - identifier: mopo-eu:cost-model
     prefLabel: Cost Model
     definition: Economic model for estimating costs of technologies, fuels, or infrastructure.
 
-  - identifier: ex:energy-modelling
+  - identifier: mopo-eu:energy-modelling
     prefLabel: Energy Modelling
     definition: Computational simulation and analysis of energy systems.
 
-  - identifier: ex:building-energy
+  - identifier: mopo-eu:building-energy
     prefLabel: Building Energy
     definition: Energy consumption and efficiency in buildings.
 
-  - identifier: ex:flexibility
+  - identifier: mopo-eu:flexibility
     prefLabel: Flexibility
     definition: Ability of energy systems to adapt to changing conditions and demands.
 
-  - identifier: ex:heat-generation
+  - identifier: mopo-eu:heat-generation
     prefLabel: Heat Generation
     definition: Production of thermal energy for heating purposes.
 
-  - identifier: ex:thermal-storage
+  - identifier: mopo-eu:thermal-storage
     prefLabel: Thermal Storage
     definition: Systems for storing thermal energy for later use.
 
-  - identifier: ex:data-processing
+  - identifier: mopo-eu:data-processing
     prefLabel: Data Processing
     definition: Transformation and analysis of raw data into usable formats.
 
-  - identifier: ex:eu-wide
+  - identifier: mopo-eu:eu-wide
     prefLabel: EU-Wide
     definition: Covering all or most European Union member states.
 
-  - identifier: ex:electricity-transmission
+  - identifier: mopo-eu:electricity-transmission
     prefLabel: Electricity Transmission
     definition: High-voltage transfer of electrical power over long distances.
 
-  - identifier: ex:cross-border
+  - identifier: mopo-eu:cross-border
     prefLabel: Cross-Border
     definition: Spanning across national or administrative boundaries.
 
-  - identifier: ex:interconnector
+  - identifier: mopo-eu:interconnector
     prefLabel: Interconnector
     definition: Infrastructure linking electricity transmission systems between regions or countries.
 
-  - identifier: ex:pecd1
+  - identifier: mopo-eu:pecd1
     prefLabel: PECD1
     definition: Pan-European Climate Database region 1.
 
-  - identifier: ex:mopo
+  - identifier: emopo-eux:mopo
     prefLabel: Mopo
     definition: Comprehensive, fast, user-friendly and thoroughly validated open-source energy system planning framework.
 
-  - identifier: ex:eu-27
+  - identifier: mopo-eu:eu-27
     prefLabel: EU-27
     definition: European Union with 27 member states (post-Brexit).
 
-  - identifier: ex:spineopt
+  - identifier: mopo-eu:spineopt
     prefLabel: SpineOpt
     definition: Flexible energy system optimization framework within the Spine Toolbox.
 
-  - identifier: ex:workflow
+  - identifier: mopo-eu:workflow
     prefLabel: Workflow
     definition: Automated sequence of data processing and modeling steps.
 
