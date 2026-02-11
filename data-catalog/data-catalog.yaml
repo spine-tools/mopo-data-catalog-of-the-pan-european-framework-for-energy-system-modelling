@@ -53,6 +53,7 @@ datasets:
     wasDerivedFrom:
       - mopo-eu:10.5281-zenodo.18549865
       - mopo-eu:10.5281/zenodo.18505234
+      - mopo-eu:10.5281/zenodo.14501623
 
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
@@ -298,6 +299,98 @@ datasets:
         title: Mopo_VRE_data_pan-European_to_Zenodo_2026.zip
         accessURL: https://zenodo.org/api/records/17950648/files/Mopo_VRE_data_pan-European_to_Zenodo_2026.zip/content
         format: zip/csv/xlsx
+
+  - identifier: mopo-eu:10.5281/zenodo.14501623
+    title: Electricity Transmission Data for the European Case Study
+    description: |
+      The data is focused only on cross-border transmission (interconnector) data between countries in the PECD1 region. A comprehensive dataset for each country's transmission network will follow in subsequent phases of the project. The primary sources for this data are publicly available resources, including ENTSO-E (https://transparency.entsoe.eu/transmission-domain/physicalFlow/show) and the TYNDP 2022 report (https://2022.entsos-tyndp-scenarios.eu/download/#use).
+
+      == Overview of the Data
+
+      The initial dataset provides information on:
+
+      * Cross-border links: Existing transmission capacities between countries.
+      * Expansion candidates: Future development projects for electricity transmission across Europe, covering the time horizon from 2030 to 2050.
+
+      For investment candidates, two categories are included:
+
+      . Real Projects: These are projects that have been thoroughly investigated in previous TYNDP cycles. They are typically expected to be commissioned in the near future and possess more defined technical and economic characteristics.
+      . Concept Projects: These represent potential projects with expected commissioning dates beyond 2040. The technical and economic parameters for these projects are less certain, reflecting their conceptual stage.
+
+      Both real and concept project capacities are aggregated for the year 2050.
+
+      == Data Components
+
+      The dataset encompasses the following key elements:
+
+      === Existing Capacity
+
+      The existing capacity of the of the cross-border interconnection that are in operation
+
+      == Incremental Capacity:
+
+      This represents additional capacity added to borders that already have existing transmission links.
+
+      === Capital Costs:
+
+      The dataset includes the cost of interconnectors, accounting for both their length and capacity. These costs also incorporate expenses related to internal reinforcement of the transmission grid.
+
+      === Interconnection Type:
+      The type of transmission technology is specified for each interconnection, indicating whether it is overhead, subsea, or a combination of overhead and subsea.
+
+    publisher:
+      name: University College Dublin
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2024-12-16
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:electricity-transmission
+      - mopo-eu:cross-border
+      - mopo-eu:interconnector
+      - mopo-eu:pecd1
+    hasPolicy: plcy:open-information-policy
+    temporal:
+      hasBeginning: 2030-01-01
+      hasEnd: 2050-12-31
+    distribution:
+      - identifier: mopo-eu:transmission-aggregated-xlsx
+        title: Power_Links_PECD1_Potentials_Aggregated.xlsx
+        accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_Aggregated.xlsx/content
+        format: xlsx
+      - identifier: mopo-eu:transmission-by-year-xlsx
+        title: Power_Links_PECD1_Potentials_by_Year.xlsx
+        accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_by_Year.xlsx/content
+        format: xlsx
+
+  # - identifier: mopo-eu:10.5281/zenodo.14282855
+  #   title: Mopo AmBIENCE2ABM Demo
+  #   description: |
+  #     Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2024-12-05
+  #   status: published
+  #   license:
+  #     title: https://creativecommons.org/licenses/by/4.0/
+  #   theme:
+  #     - mopo-eu:mopo
+  #     - mopo-eu:eu-27
+  #     - mopo-eu:building-stock
+  #     - mopo-eu:spineopt
+  #     - mopo-eu:workflow
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:ambience2abm-demo-zip
+  #       title: Mopo_AmBIENCe2ABM_demo.zip
+  #       accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
+  #       format: zip/csv
+
+
 
 series:
   - identifier: mopo-eu:abcde
