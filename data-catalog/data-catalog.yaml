@@ -365,6 +365,37 @@ datasets:
         accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_by_Year.xlsx/content
         format: xlsx
 
+  - identifier: mopo-eu:10.5281/zenodo.18590390
+    title: Mopo pan-European Methane and Hydrogen data
+    description: |
+      This dataset includes the main information to build a simplified methane network (including country-level interconnections, production and storage capacities and their associated costs). Similar information is provided for the envisaged hydrogen network.
+
+      The capacities are based on the TNDP of EntsoG.
+
+      The costs are given when publicly available (published tariffs) , otherwise an average or a realistic value is given.
+
+      Some technology costs and parameters associated to the production of methane or hydrogen are also included ; the source is specified in the dataset.
+
+    publisher:
+      name: Fluxys s.a.
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-10
+    version: v2
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:methane
+      - mopo-eu:hydrogen
+      - mopo-eu:network
+      - mopo-eu:pan-european
+    distribution:
+      - identifier: mopo-eu:gas-sectors-dataset-xlsx
+        title: Gas_Sectors_Dataset_WithSource.xlsx
+        accessURL: https://zenodo.org/api/records/18590390/files/Gas_Sectors_Dataset_WithSource.xlsx/content
+        format: xlsx
+
   # - identifier: mopo-eu:10.5281/zenodo.14282855
   #   title: Mopo AmBIENCE2ABM Demo
   #   description: |
@@ -522,6 +553,14 @@ concepts:
   - identifier: mopo-eu:workflow
     prefLabel: Workflow
     definition: Automated sequence of data processing and modeling steps.
+
+  - identifier: mopo-eu:methane
+    prefLabel: Methane
+    definition: Natural gas or methane as an energy carrier and fuel.
+
+  - identifier: mopo-eu:network
+    prefLabel: Network
+    definition: Infrastructure for transporting energy, gas, or other commodities between locations.
 
 
 # metrics:

@@ -402,18 +402,18 @@ metrics:
     expectedDataType: xsd:float
     inDimension: Currentness
 
-qualityMeasurements:
-  - identifier: qm:pan-european-completeness
-    computedOn: mopo-eu:10.5281/zenodo.18593680
-    isMeasurementOf: metric:completeness
-    value: 0.95
-    generatedAtTime: 2026-02-11
+# qualityMeasurements:
+#   - identifier: qm:pan-european-completeness
+#     computedOn: mopo-eu:10.5281/zenodo.18593680
+#     isMeasurementOf: metric:completeness
+#     value: 0.95
+#     generatedAtTime: 2026-02-11
 
-  - identifier: qm:vre-climate-completeness
-    computedOn: mopo-eu:10.5281/zenodo.18549865
-    isMeasurementOf: metric:completeness
-    value: 0.98
-    generatedAtTime: 2026-02-11
+#   - identifier: qm:vre-climate-completeness
+#     computedOn: mopo-eu:10.5281/zenodo.18549865
+#     isMeasurementOf: metric:completeness
+#     value: 0.98
+#     generatedAtTime: 2026-02-11
 
 policies:
   - uid: plcy:open-information-policy
