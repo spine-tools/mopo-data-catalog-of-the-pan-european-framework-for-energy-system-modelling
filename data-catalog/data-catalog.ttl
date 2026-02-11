@@ -2,109 +2,321 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
-@prefix ex: <http://www.example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mopo-eu: <https://spine-tools.github.io/mopo-data-catalog-of-the-pan-european-framework-for-energy-system-modelling/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix plcy: <https://www.uuidea.eu/simple_data_catalog/policies/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix sdcdc: <https://www.uuidea.eu/profiles/data-catalog/> .
+@prefix sdcdc: <https://www.uuidea.eu/profiles/data-catalog> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:abcde123 a dcat:Catalog ;
-    dcterms:description "a test data catalog created to validate the schema" ;
+mopo-eu:10.5281-zenodo.18549865 a dcat:Dataset ;
+    dcterms:description """This dataset provides simulated hourly wind and solar PV generation time series used in the Mopo project for pan‑European energy system modeling. The modeling framework follows https://doi.org/10.5281/zenodo.17950647 (validated in Nayak et al. (2025)), extended here to run on climate projections.
+Climate inputs come from two models from the Copernicus Climate Change Service (2024): MPI‑ESM1‑2‑HR (MEHR)and EC‑Earth3 (ECE3). For each model, two scenarios are simulated: SSP2‑4.5, representing an intermediate “middle‑of‑the‑road” pathway, and SSP5‑8.5, representing a very high‑emission pathway. This yields four climate projections covering 2015–2100 at hourly resolution. Following Luzia (2023), wind speeds in all projections are scaled using GWA2.
+
+Each climate projection includes:
+
+    Solar PV: 3 simulated PV technologies.
+    Offshore wind: 4 specific technologies (2 bottom‑fixed (FB) and 2 floating (FO)) plus an “existing” configuration.
+    Onshore wind: 9 specific technologies plus an “existing” configuration.
+
+“Existing” runs represent installations characteristic of 2020 in the analyzed regions, while “specific technology” runs represent possible future VRE installations. See https://doi.org/10.5281/zenodo.17950647 for more details about the simulated VRE technologies and regions.
+""" ;
+    dcterms:issued "2026-02-09"^^xsd:date ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "https://creativecommons.org/licenses/by/4.0/" ] ;
     dcterms:publisher [ a foaf:Agent ;
-            foaf:name "my name" ] ;
-    dcterms:title "test data catalog" .
+            foaf:name "Technical University of Denmark" ] ;
+    dcterms:title "Mopo pan-European VRE data - Climate change projections" ;
+    vcard:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "info@tools-for-energy-system-modelling.org" ] ;
+    adms:status "published" ;
+    dcat:distribution mopo-eu:vre-climate-projections-zip ;
+    dcat:theme mopo-eu:climate-change,
+        mopo-eu:pan-european,
+        mopo-eu:solar-power,
+        mopo-eu:wind-power ;
+    dcat:version [ a dcterms:PeriodOfTime ;
+            time:hasBeginning "2015-01-01"^^xsd:date ;
+            time:hasEnd "2100-12-31"^^xsd:date ] .
 
-ex:ewfalsdfh a dcat:DataService ;
-    dcterms:description "example data sercvice like an openAPI endpoint" ;
-    dcterms:title "Example Service" ;
-    dcat:endpointURL "https://www.example.com/getyourdatahere/" ;
-    dcat:servesDataset ex:bvkljfhds .
+mopo-eu:10.5281-zenodo.18593680 a dcat:Dataset ;
+    dcterms:description """This dataset contains information about the following sectors in Europe:
 
-ex:sfasdggfvrln a dqv:QualityMeasurement ;
-    dqv:computedOn ex:herrcgre ;
-    dqv:isMeasurementOf ex:fkrhkqewjewrc ;
+. Variable Renewable Energy
+. Hydro, reservoirs and run-of-river
+. Biomass
+. Energy conversion and storage
+. Electricity transmission (cross-border)
+. Methane and hydrogen
+. Cargo transport, biomass, hydrocarbon liquids and methanol
+. Industry, chemicals, glass, fertilisers, refineries, cement and steel
+. Buildings, non-residential and residential, heating and cooling
+. Transport, road, train, aviation and shipping
+. Residual electricity demand
+
+The dataset must be opened through SpineToolbox (from v0.11.0, spine-tools/Spine-Toolbox: Spine Toolbox is an open source Python package to manage data, scenarios and workflows for modelling and simulation. You can have your local workflow, but work as a team through version control and SQL databases.).
+
+The main folder contains and configurable file (userconfig.yml) to develop the target model. In principle, running INES builder tool, the user will get the whole Pan-European model at country resolution for onshore and seabasin-country resolution for offshore. The target model is formatted through an interoperable energy system specification (INES, ines-tools/ines-spec: Interoperable energy system data specification).
+
+This dataset includes data of EU27 plus UK, CH and NO.
+""" ;
+    dcterms:issued "2026-02-10"^^xsd:date ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "https://creativecommons.org/licenses/by/4.0/" ] ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "EPRI Europe DAC" ] ;
+    dcterms:title "Pan-European Dataset for Energy System Planning" ;
+    vcard:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "info@tools-for-energy-system-modelling.org" ] ;
+    adms:status "draft" ;
+    dcat:distribution mopo-eu:pan-european-dataset-zip ;
+    dcat:theme mopo-eu:energy,
+        mopo-eu:pan-european,
+        mopo-eu:spine-toolbox ;
+    dcat:version "v0.1" ;
+    odrl:hasPolicy plcy:open-information-policy .
+
+mopo-eu:Mopo_Data_Catalog_of_the_Pan-European_Framework_for_Energy_System_Modeling a dcat:Catalog ;
+    dcterms:description """The Mopo Data Catalog of the Pan-European Framework for Energy System Modeling contains the metadata of the datasets that have been used in the demonstration of the spine-tools and spin-opt tooling modeling the the European energy system and how it is likely to change under varying climate and economic forecasts as well as different policy regimes.  
+""" ;
+    dcterms:issued "2026-02-11"^^xsd:date ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "https://creativecommons.org/licenses/by-sa/4.0/" ] ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "https://europe.epri.com/[EPRI Europe]" ] ;
+    dcterms:title "Mopo Data Catalog of the Pan-European Framework for Energy System Modeling" ;
+    vcard:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "info@tools-for-energy-system-modelling.org" ] ;
+    adms:status "draft" .
+
+mopo-eu:abcde a dcat:DatasetSeries ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "My name" ] ;
+    dcterms:title "all the datasets by this publisher" .
+
+mopo-eu:building-energy a skos:Concept ;
+    skos:definition "Energy consumption and efficiency in buildings." ;
+    skos:prefLabel "Building Energy" .
+
+mopo-eu:building-stock a skos:Concept ;
+    skos:definition "The aggregate of buildings in a given region, including their characteristics and energy performance." ;
+    skos:prefLabel "Building Stock" .
+
+mopo-eu:carbon-dioxide a skos:Concept ;
+    skos:altLabel "CO2" ;
+    skos:definition "CO2 as a greenhouse gas and substance for transport and storage." ;
+    skos:prefLabel "Carbon Dioxide" .
+
+mopo-eu:cost-model a skos:Concept ;
+    skos:definition "Economic model for estimating costs of technologies, fuels, or infrastructure." ;
+    skos:prefLabel "Cost Model" .
+
+mopo-eu:cross-border a skos:Concept ;
+    skos:definition "Spanning across national or administrative boundaries." ;
+    skos:prefLabel "Cross-Border" .
+
+mopo-eu:data-processing a skos:Concept ;
+    skos:definition "Transformation and analysis of raw data into usable formats." ;
+    skos:prefLabel "Data Processing" .
+
+mopo-eu:district-heating a skos:Concept ;
+    skos:definition "Centralized heat distribution system serving multiple buildings." ;
+    skos:prefLabel "District Heating" .
+
+mopo-eu:electricity-transmission a skos:Concept ;
+    skos:definition "High-voltage transfer of electrical power over long distances." ;
+    skos:prefLabel "Electricity Transmission" .
+
+mopo-eu:energy-modelling a skos:Concept ;
+    skos:definition "Computational simulation and analysis of energy systems." ;
+    skos:prefLabel "Energy Modelling" .
+
+mopo-eu:eu-27 a skos:Concept ;
+    skos:definition "European Union with 27 member states (post-Brexit)." ;
+    skos:prefLabel "EU-27" .
+
+mopo-eu:eu-wide a skos:Concept ;
+    skos:definition "Covering all or most European Union member states." ;
+    skos:prefLabel "EU-Wide" .
+
+mopo-eu:europe a skos:Concept ;
+    skos:definition "The continent of Europe or European Union member states." ;
+    skos:prefLabel "Europe" .
+
+mopo-eu:flexibility a skos:Concept ;
+    skos:definition "Ability of energy systems to adapt to changing conditions and demands." ;
+    skos:prefLabel "Flexibility" .
+
+mopo-eu:heat-demand a skos:Concept ;
+    skos:definition "Energy required for space heating and hot water in buildings." ;
+    skos:prefLabel "Heat Demand" .
+
+mopo-eu:heat-generation a skos:Concept ;
+    skos:definition "Production of thermal energy for heating purposes." ;
+    skos:prefLabel "Heat Generation" .
+
+mopo-eu:hydrogen a skos:Concept ;
+    skos:definition "Hydrogen as an energy carrier and fuel." ;
+    skos:prefLabel "Hydrogen" .
+
+mopo-eu:interconnector a skos:Concept ;
+    skos:definition "Infrastructure linking electricity transmission systems between regions or countries." ;
+    skos:prefLabel "Interconnector" .
+
+mopo-eu:mopo a skos:Concept ;
+    skos:definition "Comprehensive, fast, user-friendly and thoroughly validated open-source energy system planning framework." ;
+    skos:prefLabel "Mopo" .
+
+mopo-eu:pan-european-dataset-zip a dcat:Distribution ;
+    dcterms:format "zip/csv" ;
+    dcterms:title "Pan-European_Dataset.zip" ;
+    dcat:accessURL "https://zenodo.org/api/records/18593680/files/Pan-European_Dataset.zip/content" .
+
+mopo-eu:pecd1 a skos:Concept ;
+    skos:definition "Pan-European Climate Database region 1." ;
+    skos:prefLabel "PECD1" .
+
+mopo-eu:sfasdggfvrln a dqv:QualityMeasurement ;
+    dqv:computedOn mopo-eu:herrcgre ;
+    dqv:isMeasurementOf mopo-eu:fkrhkqewjewrc ;
     dqv:value "0.9"^^xsd:float ;
     prov:generatedAtTime "2025-04-22"^^xsd:date .
 
-ex:bvkljfhds a dcat:Dataset ;
-    dcterms:license [ a dcterms:LicenseDocument ;
-            dcterms:title "cc-by 4.0" ] ;
-    dcterms:publisher [ a foaf:Agent ;
-            foaf:name "my name" ] ;
-    dcterms:title "test lineage dataset" ;
-    vcard:contactPoint [ a vcard:Kind ;
-            vcard:hasEmail "my.name@example.com" ] ;
-    adms:status "draft" ;
-    dcat:inSeries ex:abcde ;
-    dcat:theme ex:abc,
-        ex:bcd ;
-    dcat:version [ a dcterms:PeriodOfTime ;
-            time:hasBeginning "2025-01-01"^^xsd:date ;
-            time:hasEnd "2025-12-31"^^xsd:date ] ;
-    prov:wasDerivedFrom ex:herrcgre .
+mopo-eu:spineopt a skos:Concept ;
+    skos:definition "Flexible energy system optimization framework within the Spine Toolbox." ;
+    skos:prefLabel "SpineOpt" .
 
-ex:def a skos:Concept ;
-    skos:altLabel "information (leave a comment ;-))" ;
-    skos:definition "data is plural of datum" ;
-    skos:prefLabel "data" .
+mopo-eu:thermal-storage a skos:Concept ;
+    skos:definition "Systems for storing thermal energy for later use." ;
+    skos:prefLabel "Thermal Storage" .
 
-ex:fekfrbajr a dcat:Distribution ;
-    dcterms:format "csv" ;
-    dcterms:issued "2025-11-26"^^xsd:date ;
-    dcat:accessURL "https://www.example.com/getyourdatahere.csv" .
+mopo-eu:transport a skos:Concept ;
+    skos:definition "Movement of goods and people, including infrastructure and vehicles." ;
+    skos:prefLabel "Transport" .
 
-ex:fkrhkqewjewrc a dqv:Metric ;
+mopo-eu:vre-climate-projections-zip a dcat:Distribution ;
+    dcterms:format "zip/csv" ;
+    dcterms:title "Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip" ;
+    dcat:accessURL "https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content" .
+
+mopo-eu:workflow a skos:Concept ;
+    skos:definition "Automated sequence of data processing and modeling steps." ;
+    skos:prefLabel "Workflow" .
+
+plcy:make-accessible a odrl:Duty ;
+    dcterms:description """The provider must make the data available through an appropriate
+protocol so that consumers can retrieve it without restriction.
+""" ;
+    odrl:action "make_available" ;
+    odrl:assignee "Data Provider" .
+
+plcy:open-info-access a odrl:Permission ;
+    dcterms:description """Allows any consumer to access the data.
+""" ;
+    odrl:action "access" ;
+    odrl:assignee "Data Consumer" .
+
+plcy:provide-license a odrl:Duty ;
+    dcterms:description """The publisher must provide an open‑source or Creative‑Commons licence
+describing how the data may be used.
+""" ;
+    odrl:action "provide" ;
+    odrl:assignee "Data Provider" .
+
+plcy:provide-rights-statement a odrl:Duty ;
+    dcterms:description """The publisher must provide a rights statement (e.g., from rightsstatements.org)
+indicating any intellectual‑property or copy rights.
+""" ;
+    odrl:action "provide" ;
+    odrl:assignee "Data Provider" .
+
+plcy:register-in-catalog a odrl:Duty ;
+    dcterms:description """The publisher must register the data in the project catalog so it is findable.
+""" ;
+    odrl:action "register" ;
+    odrl:assignee "Data Provider" .
+
+mopo-eu:climate-change a skos:Concept ;
+    skos:definition "Long-term shifts in global temperatures and weather patterns." ;
+    skos:prefLabel "Climate Change" .
+
+mopo-eu:energy a skos:Concept ;
+    skos:definition "Energy resources and systems for power generation, transmission, and consumption." ;
+    skos:prefLabel "Energy" .
+
+mopo-eu:fkrhkqewjewrc a dqv:Metric ;
     skos:definition "an example of a data quality metric" ;
     skos:prefLabel "example metric" ;
     dqv:expectedDataType xsd:float ;
     dqv:inDimension "Completeness" .
 
-ex:abc a skos:Concept ;
-    skos:altLabel "juice" ;
-    skos:definition "energy is energy" ;
-    skos:prefLabel "energy" .
+mopo-eu:solar-power a skos:Concept ;
+    skos:altLabel "PV" ;
+    skos:definition "Electricity generated from sunlight using photovoltaic cells or concentrated solar power." ;
+    skos:prefLabel "Solar Power" .
 
-ex:abcde a dcat:DatasetSeries ;
-    dcterms:publisher [ a foaf:Agent ;
-            foaf:name "My name" ] ;
-    dcterms:title "all the datasets by this publisher" .
+mopo-eu:spine-toolbox a skos:Concept ;
+    skos:definition "Open-source energy system modeling framework and toolset." ;
+    skos:prefLabel "Spine Toolbox" .
 
-ex:bcd a skos:Concept ;
-    skos:altLabel "practice" ;
-    skos:definition "test is just for testing" ;
-    skos:prefLabel "test" .
+mopo-eu:wind-power a skos:Concept ;
+    skos:definition "Electricity generated from wind using turbines." ;
+    skos:prefLabel "Wind Power" .
 
-ex:herrcgre a dcat:Dataset ;
-    dcterms:license [ a dcterms:LicenseDocument ;
-            dcterms:title "cc-by 4.0" ] ;
-    dcterms:publisher [ a foaf:Agent ;
-            foaf:name "my name" ] ;
-    dcterms:title "test dataset" ;
-    vcard:contactPoint [ a vcard:Kind ;
-            vcard:hasEmail "my.name@example.com" ] ;
-    adms:status "draft" ;
-    dcat:distribution ex:fekfrbajr ;
-    dcat:inSeries ex:abcde ;
-    dcat:theme ex:abc,
-        ex:bcd,
-        ex:def ;
-    dcat:version [ a dcterms:PeriodOfTime ;
-            time:hasBeginning "2025-01-01"^^xsd:date ;
-            time:hasEnd "2025-12-31"^^xsd:date ] .
+plcy:open-information-policy a odrl:Policy ;
+    dcterms:description """Open Information policy for the project.  
+It ensures that data is Findable, Accessible, Interoperable, and Reusable (FAIR).
+""" ;
+    dcterms:title "open information policy" ;
+    odrl:obligation plcy:make-accessible,
+        plcy:provide-license,
+        plcy:provide-rights-statement,
+        plcy:register-in-catalog ;
+    odrl:permission plcy:open-info-access .
+
+mopo-eu:pan-european a skos:Concept ;
+    skos:definition "Covering the entire European region or multiple European countries." ;
+    skos:prefLabel "Pan-European" .
 
 [] a sdcdc:Container ;
-    sdcdc:concepts ex:abc,
-        ex:bcd,
-        ex:def ;
-    sdcdc:dataCatalog ex:abcde123 ;
-    sdcdc:dataServices ex:ewfalsdfh ;
-    sdcdc:datasets ex:bvkljfhds,
-        ex:herrcgre ;
-    sdcdc:distributions ex:fekfrbajr ;
-    sdcdc:metrics ex:fkrhkqewjewrc ;
-    sdcdc:qualityMeasurements ex:sfasdggfvrln ;
-    sdcdc:series ex:abcde .
+    sdcdc:concepts mopo-eu:building-energy,
+        mopo-eu:building-stock,
+        mopo-eu:carbon-dioxide,
+        mopo-eu:climate-change,
+        mopo-eu:cost-model,
+        mopo-eu:cross-border,
+        mopo-eu:data-processing,
+        mopo-eu:district-heating,
+        mopo-eu:electricity-transmission,
+        mopo-eu:energy,
+        mopo-eu:energy-modelling,
+        mopo-eu:eu-27,
+        mopo-eu:eu-wide,
+        mopo-eu:europe,
+        mopo-eu:flexibility,
+        mopo-eu:heat-demand,
+        mopo-eu:heat-generation,
+        mopo-eu:hydrogen,
+        mopo-eu:interconnector,
+        mopo-eu:mopo,
+        mopo-eu:pan-european,
+        mopo-eu:pecd1,
+        mopo-eu:solar-power,
+        mopo-eu:spine-toolbox,
+        mopo-eu:spineopt,
+        mopo-eu:thermal-storage,
+        mopo-eu:transport,
+        mopo-eu:wind-power,
+        mopo-eu:workflow ;
+    sdcdc:dataCatalog mopo-eu:Mopo_Data_Catalog_of_the_Pan-European_Framework_for_Energy_System_Modeling ;
+    sdcdc:datasets mopo-eu:10.5281-zenodo.18549865,
+        mopo-eu:10.5281-zenodo.18593680 ;
+    sdcdc:metrics mopo-eu:fkrhkqewjewrc ;
+    sdcdc:policies plcy:open-information-policy ;
+    sdcdc:qualityMeasurements mopo-eu:sfasdggfvrln ;
+    sdcdc:series mopo-eu:abcde .
 
