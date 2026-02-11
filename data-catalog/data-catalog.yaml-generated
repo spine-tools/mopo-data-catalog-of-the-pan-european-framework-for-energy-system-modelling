@@ -42,55 +42,55 @@ datasets:
   #       accessURL: https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content
   #       format: zip/csv
 
-  - identifier: mopo-eu:10.5281/zenodo.18505234
-    title: MopoHeatSectorDataProcessing output
-    description: |
-      Output from MopoHeatSectorDataProcessing containing heat pump COP timeseries, building heating/cooling demand timeseries, heat storage parameters, heating technology parameters, and capacity estimations for European building stock.
-    publisher:
-      name: VTT Technical Research Centre of Finland
-    contactPoint:
-      hasEmail: info@tools-for-energy-system-modelling.org
-    issued: 2026-02-06
-    version: v0.5.3
-    status: published
-    license:
-      title: https://creativecommons.org/licenses/by/4.0/
-    theme:
-      - mopo-eu:building-stock
-      - mopo-eu:heat-demand
-      - mopo-eu:district-heating
-      - mopo-eu:europe
-    hasPolicy: plcy:open-information-policy
-    distribution:
-      - identifier: mopo-eu:heat-sector-output-zip
-        title: output.zip
-        accessURL: https://zenodo.org/api/records/18505234/files/output.zip/content
-        format: zip/csv
+  # - identifier: mopo-eu:10.5281/zenodo.18505234
+  #   title: MopoHeatSectorDataProcessing output
+  #   description: |
+  #     Output from MopoHeatSectorDataProcessing containing heat pump COP timeseries, building heating/cooling demand timeseries, heat storage parameters, heating technology parameters, and capacity estimations for European building stock.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2026-02-06
+  #   version: v0.5.3
+  #   status: published
+  #   license:
+  #     title: https://creativecommons.org/licenses/by/4.0/
+  #   theme:
+  #     - mopo-eu:building-stock
+  #     - mopo-eu:heat-demand
+  #     - mopo-eu:district-heating
+  #     - mopo-eu:europe
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:heat-sector-output-zip
+  #       title: output.zip
+  #       accessURL: https://zenodo.org/api/records/18505234/files/output.zip/content
+  #       format: zip/csv
 
-  - identifier: mopo-eu:10.5281/zenodo.18482337
-    title: Cost model for carbon dioxide and hydrogen derivatives land and sea transport
-    description: |
-      Cost models for the transportation of hydrogen and its derivatives as well as carbon dioxide, implemented in MS Excel. Includes separate files for road and ship transportation.
-    publisher:
-      name: VTT Technical Research Centre of Finland
-    contactPoint:
-      hasEmail: info@tools-for-energy-system-modelling.org
-    issued: 2026-02-04
-    version: v0.9
-    status: published
-    license:
-      title: https://creativecommons.org/licenses/by-sa/4.0/
-    theme:
-      - mopo-eu:transport
-      - mopo-eu:hydrogen
-      - mopo-eu:carbon-dioxide
-      - mopo-eu:cost-model
-    hasPolicy: plcy:open-information-policy
-    distribution:
-      - identifier: mopo-eu:transport-cost-zip
-        title: transportcost_v0.9.zip
-        accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
-        format: zip/csv
+  # - identifier: mopo-eu:10.5281/zenodo.18482337
+  #   title: Cost model for carbon dioxide and hydrogen derivatives land and sea transport
+  #   description: |
+  #     Cost models for the transportation of hydrogen and its derivatives as well as carbon dioxide, implemented in MS Excel. Includes separate files for road and ship transportation.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2026-02-04
+  #   version: v0.9
+  #   status: published
+  #   license:
+  #     title: https://creativecommons.org/licenses/by-sa/4.0/
+  #   theme:
+  #     - mopo-eu:transport
+  #     - mopo-eu:hydrogen
+  #     - mopo-eu:carbon-dioxide
+  #     - mopo-eu:cost-model
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:transport-cost-zip
+  #       title: transportcost_v0.9.zip
+  #       accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
+  #       format: zip/csv
 
   - identifier: mopo-eu:10.5281/zenodo.18253406
     title: vttresearch/ArchetypeBuildingModel v2.9.1

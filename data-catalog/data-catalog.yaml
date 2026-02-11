@@ -50,6 +50,10 @@ datasets:
       - mopo-eu:pan-european
       - mopo-eu:spine-toolbox
     hasPolicy: plcy:open-information-policy
+    wasDerivedFrom:
+      - mopo-eu:10.5281-zenodo.18549865
+      - mopo-eu:10.5281/zenodo.18505234
+
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
         title: Pan-European_Dataset.zip
@@ -100,7 +104,7 @@ datasets:
       Output produced by MopoHeatSectorDataProcessing, provided as a separate repository due to its size not really befitting a GitHub repository.
 
       Most of the contents of this description are copied from `MopoHeatSectorDataProcessing/output/README.md`, so all the references might not make sense within the context of just these output files.
-      
+
       === cop-timeseries/*.csv
 
       Hourly timeseries for different heat pump coefficients of performance for different countries, calculated using the Mopo AmBIENCE2ABM Demo. Note that the COP approximation uses a rather crude constant exergy Carnot method.
@@ -191,6 +195,30 @@ datasets:
         accessURL: https://zenodo.org/api/records/18505234/files/output.zip/content
         format: zip/csv
 
+  - identifier: mopo-eu:10.5281/zenodo.18482337
+    title: Cost model for carbon dioxide and hydrogen derivatives land and sea transport
+    description: |
+      This repository contains cost models for the transportation of hydrogen and its derivatives as well as carbon dioxide. The cost models have been implemented in MS Excel. A separate file has been made for road transportation and ship transportation. At this moment rail transport has not been included because of lack of reliable data. The user may change the parameters which have been styled with the Excel "input" style. The results are given as total cost per tonne of cargo or per megawatt-hour of energy.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-04
+    version: v0.9
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by-sa/4.0/
+    theme:
+      - mopo-eu:transport
+      - mopo-eu:hydrogen
+      - mopo-eu:carbon-dioxide
+      - mopo-eu:cost-model
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: mopo-eu:transport-cost-zip
+        title: transportcost_v0.9.zip
+        accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
+        format: zip/xlsx
 
 series:
   - identifier: mopo-eu:abcde
