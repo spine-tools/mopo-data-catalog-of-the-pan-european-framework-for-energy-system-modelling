@@ -49,11 +49,13 @@ datasets:
       - mopo-eu:energy
       - mopo-eu:pan-european
       - mopo-eu:spine-toolbox
-    hasPolicy: plcy:open-information-policy
+    hasPolicy: plcy:open-information-policy 
     wasDerivedFrom:
       - mopo-eu:10.5281-zenodo.18549865
       - mopo-eu:10.5281/zenodo.18505234
       - mopo-eu:10.5281/zenodo.14501623
+      - mopo-eu:10.5281/zenodo.17950648
+      - mopo-eu:10.5281/zenodo.18590390
 
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
