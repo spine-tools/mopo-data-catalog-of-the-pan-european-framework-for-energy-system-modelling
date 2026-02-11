@@ -19,17 +19,17 @@ datasets:
     description: |
       This dataset contains information about the following sectors in Europe:
 
-      . Variable Renewable Energy
-      . Hydro, reservoirs and run-of-river
-      . Biomass
-      . Energy conversion and storage
-      . Electricity transmission (cross-border)
-      . Methane and hydrogen
-      . Cargo transport, biomass, hydrocarbon liquids and methanol
-      . Industry, chemicals, glass, fertilisers, refineries, cement and steel
-      . Buildings, non-residential and residential, heating and cooling
-      . Transport, road, train, aviation and shipping
-      . Residual electricity demand
+      * Variable Renewable Energy
+      * Hydro, reservoirs and run-of-river
+      * Biomass
+      * Energy conversion and storage
+      * Electricity transmission (cross-border)
+      * Methane and hydrogen
+      * Cargo transport, biomass, hydrocarbon liquids and methanol
+      * Industry, chemicals, glass, fertilisers, refineries, cement and steel
+      * Buildings, non-residential and residential, heating and cooling
+      * Transport, road, train, aviation and shipping
+      * Residual electricity demand
 
       The dataset must be opened through SpineToolbox (from v0.11.0, spine-tools/Spine-Toolbox: Spine Toolbox is an open source Python package to manage data, scenarios and workflows for modelling and simulation. You can have your local workflow, but work as a team through version control and SQL databases.).
 
@@ -110,22 +110,22 @@ datasets:
       Hourly timeseries for different heat pump coefficients of performance for different countries, calculated using the Mopo AmBIENCE2ABM Demo. Note that the COP approximation uses a rather crude constant exergy Carnot method.
       Contains 5 weather years:
 
-      . 1995
-      . 2008
-      . 2009
-      . 2012
-      . 2015
+      * 1995
+      * 2008
+      * 2009
+      * 2012
+      * 2015
 
       Contains 8 different COP timeseries:
 
-      . `A2AHP-air` space heating using an air-to-air heat pump (`A2AHP`).
-      . `A2AHP-cooling` space cooling using an air-to-air heat pump.
-      . `A2WHP-DHW` domestic hot water (`DHW`) heating using an air-to-water heat pump (`A2WHP`).
-      . `A2WHP-floor` space heating using an air-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
-      . `A2WHP-radiators` space heating using an air-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
-      . `G2WHP-DHW` domestic hot water heating using an ground-to-water heat pump (`G2WHP`).
-      . `G2WHP-floor` space heating using an ground-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
-      . `G2WHP-radiators` space heating using an ground-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
+      * `A2AHP-air` space heating using an air-to-air heat pump (`A2AHP`).
+      * `A2AHP-cooling` space cooling using an air-to-air heat pump.
+      * `A2WHP-DHW` domestic hot water (`DHW`) heating using an air-to-water heat pump (`A2WHP`).
+      * `A2WHP-floor` space heating using an air-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
+      * `A2WHP-radiators` space heating using an air-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
+      * `G2WHP-DHW` domestic hot water heating using an ground-to-water heat pump (`G2WHP`).
+      * `G2WHP-floor` space heating using an ground-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
+      * `G2WHP-radiators` space heating using an ground-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
 
       Produced by `cop_export.ipynb` with more details on how the data is reorganized from the raw ArchetypeBuildingModel output.
 
@@ -219,6 +219,85 @@ datasets:
         title: transportcost_v0.9.zip
         accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
         format: zip/xlsx
+
+  - identifier: mopo-eu:10.5281/zenodo.18253406
+    title: vttresearch/ArchetypeBuildingModel v2.9.1
+    description: |
+      Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-15
+    version: v2.9.1
+    status: published
+    license:
+      title: https://opensource.org/licenses/MIT
+    theme:
+      - mopo-eu:building-stock
+      - mopo-eu:energy-modelling
+      - mopo-eu:building-energy
+      - mopo-eu:flexibility
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: mopo-eu:archetype-building-model-zip
+        title: ArchetypeBuildingModel-v2.9.1.zip
+        accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
+        format: zip/python/julia/json
+
+  # - identifier: mopo-eu:10.5281/zenodo.18253094
+  #   title: spine-tools/MopoHeatSectorDataProcessing v0.5.2
+  #   description: |
+  #     Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing heat sector data including building stock, heat-only generation, and thermal storage data.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2026-01-15
+  #   version: v0.5.2
+  #   status: published
+  #   license:
+  #     title: https://opensource.org/licenses/MIT
+  #   theme:
+  #     - mopo-eu:building-stock
+  #     - mopo-eu:heat-generation
+  #     - mopo-eu:thermal-storage
+  #     - mopo-eu:data-processing
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:heat-sector-processing-zip
+  #       title: MopoHeatSectorDataProcessing-v0.5.2.zip
+  #       accessURL: https://zenodo.org/api/records/18253094/files/spine-tools/MopoHeatSectorDataProcessing-v0.5.2.zip/content
+  #       format: zip/csv
+
+
+
+  - identifier: mopo-eu:10.5281/zenodo.17950648
+    title: Mopo pan-European VRE data
+    description: |
+
+      This dataset includes simulated hourly wind and solar PV generation time series, used in the Mopo project for pan-European energy system modeling. Also included are VRE costs, estimated greenfield installation potentials and installed VRE capacities in years 2020 and 2025. These data are povided in the respectice folders, with the "Maps and info" folder providing information on how the data were generated. The file "Info_about_VRE_time_series" describes how the time series are simulated and the file "Info_about_VRE_costs_potentials_and_existing_installed_capacities" describes the VRE costs, greenfield installation potentials and existing installed VRE capacities. All time series are in GMT. The cited journal paper describes the wind simulation methodology (combination of ERA5 and GWA is used) and provides validation results. It is requested that the paper is cited when the data are used.
+
+      The data includes 3 simulated solar PV technologies. Existing and 4 specific technologies for offshore wind; 2 with bottom fixed turbines (FB) and 2 with floating turbines (FO). Existing and 9 specific technologies for onshore wind. The existing runs represent the existing (representative of the year 2020) installations in the analyzed regions. The specific technology runs represent possible future VRE installations. The file "Info_about_the_VRE_time_series" in the "Maps and info" folder describe the different VRE technologies.
+
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-13
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:solar-power
+      - mopo-eu:wind-power
+      - mopo-eu:pan-european
+    # hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: mopo-eu:vre-data-zip
+        title: Mopo_VRE_data_pan-European_to_Zenodo_2026.zip
+        accessURL: https://zenodo.org/api/records/17950648/files/Mopo_VRE_data_pan-European_to_Zenodo_2026.zip/content
+        format: zip/csv/xlsx
 
 series:
   - identifier: mopo-eu:abcde
