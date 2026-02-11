@@ -17,14 +17,32 @@ datasets:
   - identifier: mopo-eu:10.5281/zenodo.18593680
     title: Pan-European Dataset for Energy System Planning
     description: |
-      Comprehensive dataset for pan-European energy system planning covering sectors including Variable Renewable Energy, Hydro, Biomass, Energy conversion and storage, Electricity transmission, Methane and hydrogen, Cargo transport, Industry (chemicals, glass, fertilisers, refineries, cement, steel), Buildings (heating and cooling), and Transport. The dataset is designed to be opened through SpineToolbox.
+      This dataset contains information about the following sectors in Europe:
+
+      . Variable Renewable Energy
+      . Hydro, reservoirs and run-of-river
+      . Biomass
+      . Energy conversion and storage
+      . Electricity transmission (cross-border)
+      . Methane and hydrogen
+      . Cargo transport, biomass, hydrocarbon liquids and methanol
+      . Industry, chemicals, glass, fertilisers, refineries, cement and steel
+      . Buildings, non-residential and residential, heating and cooling
+      . Transport, road, train, aviation and shipping
+      . Residual electricity demand
+
+      The dataset must be opened through SpineToolbox (from v0.11.0, spine-tools/Spine-Toolbox: Spine Toolbox is an open source Python package to manage data, scenarios and workflows for modelling and simulation. You can have your local workflow, but work as a team through version control and SQL databases.).
+
+      The main folder contains and configurable file (userconfig.yml) to develop the target model. In principle, running INES builder tool, the user will get the whole Pan-European model at country resolution for onshore and seabasin-country resolution for offshore. The target model is formatted through an interoperable energy system specification (INES, ines-tools/ines-spec: Interoperable energy system data specification).
+
+      This dataset includes data of EU27 plus UK, CH and NO.
     publisher:
       name: EPRI Europe DAC
     contactPoint:
       hasEmail: info@tools-for-energy-system-modelling.org
     issued: 2026-02-10
     version: v0.1
-    status: published
+    status: draft
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
@@ -36,9 +54,46 @@ datasets:
       - identifier: mopo-eu:pan-european-dataset-zip
         title: Pan-European_Dataset.zip
         accessURL: https://zenodo.org/api/records/18593680/files/Pan-European_Dataset.zip/content
-        format: application/zip    
+        format: zip/csv   
 
+  - identifier: mopo-eu:10.5281/zenodo.18549865
+    title: Mopo pan-European VRE data - Climate change projections
+    description: |
+      This dataset provides simulated hourly wind and solar PV generation time series used in the Mopo project for pan‑European energy system modeling. The modeling framework follows https://doi.org/10.5281/zenodo.17950647 (validated in Nayak et al. (2025)), extended here to run on climate projections.
+      Climate inputs come from two models from the Copernicus Climate Change Service (2024): MPI‑ESM1‑2‑HR (MEHR)and EC‑Earth3 (ECE3). For each model, two scenarios are simulated: SSP2‑4.5, representing an intermediate “middle‑of‑the‑road” pathway, and SSP5‑8.5, representing a very high‑emission pathway. This yields four climate projections covering 2015–2100 at hourly resolution. Following Luzia (2023), wind speeds in all projections are scaled using GWA2.
 
+      Each climate projection includes:
+
+          Solar PV: 3 simulated PV technologies.
+          Offshore wind: 4 specific technologies (2 bottom‑fixed (FB) and 2 floating (FO)) plus an “existing” configuration.
+          Onshore wind: 9 specific technologies plus an “existing” configuration.
+
+      “Existing” runs represent installations characteristic of 2020 in the analyzed regions, while “specific technology” runs represent possible future VRE installations. See https://doi.org/10.5281/zenodo.17950647 for more details about the simulated VRE technologies and regions.
+
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-09
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:solar-power
+      - mopo-eu:wind-power
+      - mopo-eu:climate-change
+      - mopo-eu:pan-european
+    # wasDerivedFrom:
+    #   - mopo-eu:10.5281/zenodo.17950647
+    # hasPolicy: plcy:open-information-policy
+    temporal:
+      hasBeginning: 2015-01-01
+      hasEnd: 2100-12-31
+    distribution:
+      - identifier: dist:vre-climate-projections-zip
+        title: Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip
+        accessURL: https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content
+        format: zip/csv 
 
 series:
   - identifier: mopo-eu:abcde

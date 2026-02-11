@@ -13,31 +13,7 @@ dataCatalog:
   issued: 2026-02-11
 
 datasets:
-  - identifier: zenodo:10.5281/zenodo.18593680
-    title: Pan-European Dataset for Energy System Planning
-    description: |
-      Comprehensive dataset for pan-European energy system planning covering sectors including Variable Renewable Energy, Hydro, Biomass, Energy conversion and storage, Electricity transmission, Methane and hydrogen, Cargo transport, Industry (chemicals, glass, fertilisers, refineries, cement, steel), Buildings (heating and cooling), and Transport. The dataset is designed to be opened through SpineToolbox.
-    publisher:
-      name: EPRI Europe DAC
-    contactPoint:
-      hasEmail: info@tools-for-energy-system-modelling.org
-    issued: 2026-02-10
-    version: v0.1
-    status: published
-    license:
-      title: https://creativecommons.org/licenses/by/4.0/
-    theme:
-      - ex:energy
-      - ex:pan-european
-      - ex:spine-toolbox
-    hasPolicy: plcy:open-information-policy
-    distribution:
-      - identifier: dist:pan-european-dataset-zip
-        title: Pan-European_Dataset.zip
-        accessURL: https://zenodo.org/api/records/18593680/files/Pan-European_Dataset.zip/content
-        format: application/zip
-
-  - identifier: zenodo:10.5281/zenodo.18549865
+  - identifier: mopo-eu:10.5281/zenodo.18549865
     title: Mopo pan-European VRE data - Climate change projections
     description: |
       Simulated hourly wind and solar PV generation time series for pan-European energy system modeling based on climate projections from two models (MPI-ESM1-2-HR and EC-Earth3) under two scenarios (SSP2-4.5 and SSP5-8.5). Covers 2015-2100 at hourly resolution.
@@ -50,12 +26,12 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:solar-power
-      - ex:wind-power
-      - ex:climate-change
-      - ex:pan-european
+      - mopo-eu:solar-power
+      - mopo-eu:wind-power
+      - mopo-eu:climate-change
+      - mopo-eu:pan-european
     wasDerivedFrom:
-      - zenodo:10.5281/zenodo.17950647
+      - mopo-eu:10.5281/zenodo.17950647
     hasPolicy: plcy:open-information-policy
     temporal:
       hasBeginning: 2015-01-01
@@ -64,9 +40,9 @@ datasets:
       - identifier: dist:vre-climate-projections-zip
         title: Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip
         accessURL: https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.18505234
+  - identifier: mopo-eu:10.5281/zenodo.18505234
     title: MopoHeatSectorDataProcessing output
     description: |
       Output from MopoHeatSectorDataProcessing containing heat pump COP timeseries, building heating/cooling demand timeseries, heat storage parameters, heating technology parameters, and capacity estimations for European building stock.
@@ -80,18 +56,18 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:building-stock
-      - ex:heat-demand
-      - ex:district-heating
-      - ex:europe
+      - mopo-eu:building-stock
+      - mopo-eu:heat-demand
+      - mopo-eu:district-heating
+      - mopo-eu:europe
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:heat-sector-output-zip
         title: output.zip
         accessURL: https://zenodo.org/api/records/18505234/files/output.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.18482337
+  - identifier: mopo-eu:10.5281/zenodo.18482337
     title: Cost model for carbon dioxide and hydrogen derivatives land and sea transport
     description: |
       Cost models for the transportation of hydrogen and its derivatives as well as carbon dioxide, implemented in MS Excel. Includes separate files for road and ship transportation.
@@ -105,18 +81,18 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by-sa/4.0/
     theme:
-      - ex:transport
-      - ex:hydrogen
-      - ex:carbon-dioxide
-      - ex:cost-model
+      - mopo-eu:transport
+      - mopo-eu:hydrogen
+      - mopo-eu:carbon-dioxide
+      - mopo-eu:cost-model
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:transport-cost-zip
         title: transportcost_v0.9.zip
         accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.18253406
+  - identifier: mopo-eu:10.5281/zenodo.18253406
     title: vttresearch/ArchetypeBuildingModel v2.9.1
     description: |
       Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
@@ -130,18 +106,18 @@ datasets:
     license:
       title: https://opensource.org/licenses/MIT
     theme:
-      - ex:building-stock
-      - ex:energy-modelling
-      - ex:building-energy
-      - ex:flexibility
+      - mopo-eu:building-stock
+      - mopo-eu:energy-modelling
+      - mopo-eu:building-energy
+      - mopo-eu:flexibility
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:archetype-building-model-zip
         title: ArchetypeBuildingModel-v2.9.1.zip
         accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.18253094
+  - identifier: mopo-eu:10.5281/zenodo.18253094
     title: spine-tools/MopoHeatSectorDataProcessing v0.5.2
     description: |
       Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing heat sector data including building stock, heat-only generation, and thermal storage data.
@@ -155,18 +131,18 @@ datasets:
     license:
       title: https://opensource.org/licenses/MIT
     theme:
-      - ex:building-stock
-      - ex:heat-generation
-      - ex:thermal-storage
-      - ex:data-processing
+      - mopo-eu:building-stock
+      - mopo-eu:heat-generation
+      - mopo-eu:thermal-storage
+      - mopo-eu:data-processing
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:heat-sector-processing-zip
         title: MopoHeatSectorDataProcessing-v0.5.2.zip
         accessURL: https://zenodo.org/api/records/18253094/files/spine-tools/MopoHeatSectorDataProcessing-v0.5.2.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.18252929
+  - identifier: mopo-eu:10.5281/zenodo.18252929
     title: spine-tools/AmBIENCe2ABM v1.1.1
     description: |
       Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing EU-wide building stock input data for ArchetypeBuildingModel.jl.
@@ -180,17 +156,17 @@ datasets:
     license:
       title: https://opensource.org/licenses/MIT
     theme:
-      - ex:building-stock
-      - ex:data-processing
-      - ex:eu-wide
+      - mopo-eu:building-stock
+      - mopo-eu:data-processing
+      - mopo-eu:eu-wide
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:ambience2abm-zip
         title: AmBIENCe2ABM-v1.1.1.zip
         accessURL: https://zenodo.org/api/records/18252929/files/spine-tools/AmBIENCe2ABM-v1.1.1.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.17950648
+  - identifier: mopo-eu:10.5281/zenodo.17950648
     title: Mopo pan-European VRE data
     description: |
       Simulated hourly wind and solar PV generation time series for pan-European energy system modeling. Includes VRE costs, estimated greenfield installation potentials, and installed VRE capacities for 2020 and 2025.
@@ -203,17 +179,17 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:solar-power
-      - ex:wind-power
-      - ex:pan-european
+      - mopo-eu:solar-power
+      - mopo-eu:wind-power
+      - mopo-eu:pan-european
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:vre-data-zip
         title: Mopo_VRE_data_pan-European_to_Zenodo_2026.zip
         accessURL: https://zenodo.org/api/records/17950648/files/Mopo_VRE_data_pan-European_to_Zenodo_2026.zip/content
-        format: application/zip
+        format: zip/csv
 
-  - identifier: zenodo:10.5281/zenodo.14501623
+  - identifier: mopo-eu:10.5281/zenodo.14501623
     title: Electricity Transmission Data for the European Case Study
     description: |
       Cross-border transmission (interconnector) data between countries in the PECD1 region. Includes existing transmission capacities and expansion candidates for electricity transmission covering 2030-2050.
@@ -226,10 +202,10 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:electricity-transmission
-      - ex:cross-border
-      - ex:interconnector
-      - ex:pecd1
+      - mopo-eu:electricity-transmission
+      - mopo-eu:cross-border
+      - mopo-eu:interconnector
+      - mopo-eu:pecd1
     hasPolicy: plcy:open-information-policy
     temporal:
       hasBeginning: 2030-01-01
@@ -244,7 +220,7 @@ datasets:
         accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_by_Year.xlsx/content
         format: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
-  - identifier: zenodo:10.5281/zenodo.14282855
+  - identifier: mopo-eu:10.5281/zenodo.14282855
     title: Mopo AmBIENCE2ABM Demo
     description: |
       Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
@@ -257,134 +233,134 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:mopo
-      - ex:eu-27
-      - ex:building-stock
-      - ex:spineopt
-      - ex:workflow
+      - mopo-eu:mopo
+      - mopo-eu:eu-27
+      - mopo-eu:building-stock
+      - mopo-eu:spineopt
+      - mopo-eu:workflow
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: dist:ambience2abm-demo-zip
         title: Mopo_AmBIENCe2ABM_demo.zip
         accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
-        format: application/zip
+        format: zip/csv
 
 concepts:
-  - identifier: ex:energy
+  - identifier: mopo-eu:energy
     prefLabel: Energy
     definition: Energy resources and systems for power generation, transmission, and consumption.
 
-  - identifier: ex:pan-european
+  - identifier: mopo-eu:pan-european
     prefLabel: Pan-European
     definition: Covering the entire European region or multiple European countries.
 
-  - identifier: ex:spine-toolbox
+  - identifier: mopo-eu:spine-toolbox
     prefLabel: Spine Toolbox
     definition: Open-source energy system modeling framework and toolset.
 
-  - identifier: ex:solar-power
+  - identifier: mopo-eu:solar-power
     prefLabel: Solar Power
     definition: Electricity generated from sunlight using photovoltaic cells or concentrated solar power.
     altLabel: PV
 
-  - identifier: ex:wind-power
+  - identifier: mopo-eu:wind-power
     prefLabel: Wind Power
     definition: Electricity generated from wind using turbines.
 
-  - identifier: ex:climate-change
+  - identifier: mopo-eu:climate-change
     prefLabel: Climate Change
     definition: Long-term shifts in global temperatures and weather patterns.
 
-  - identifier: ex:building-stock
+  - identifier: mopo-eu:building-stock
     prefLabel: Building Stock
     definition: The aggregate of buildings in a given region, including their characteristics and energy performance.
 
-  - identifier: ex:heat-demand
+  - identifier: mopo-eu:heat-demand
     prefLabel: Heat Demand
     definition: Energy required for space heating and hot water in buildings.
 
-  - identifier: ex:district-heating
+  - identifier: mopo-eu:district-heating
     prefLabel: District Heating
     definition: Centralized heat distribution system serving multiple buildings.
 
-  - identifier: ex:europe
+  - identifier: mopo-eu:europe
     prefLabel: Europe
     definition: The continent of Europe or European Union member states.
 
-  - identifier: ex:transport
+  - identifier: mopo-eu:transport
     prefLabel: Transport
     definition: Movement of goods and people, including infrastructure and vehicles.
 
-  - identifier: ex:hydrogen
+  - identifier: mopo-eu:hydrogen
     prefLabel: Hydrogen
     definition: Hydrogen as an energy carrier and fuel.
 
-  - identifier: ex:carbon-dioxide
+  - identifier: mopo-eu:carbon-dioxide
     prefLabel: Carbon Dioxide
     definition: CO2 as a greenhouse gas and substance for transport and storage.
     altLabel: CO2
 
-  - identifier: ex:cost-model
+  - identifier: mopo-eu:cost-model
     prefLabel: Cost Model
     definition: Economic model for estimating costs of technologies, fuels, or infrastructure.
 
-  - identifier: ex:energy-modelling
+  - identifier: mopo-eu:energy-modelling
     prefLabel: Energy Modelling
     definition: Computational simulation and analysis of energy systems.
 
-  - identifier: ex:building-energy
+  - identifier: mopo-eu:building-energy
     prefLabel: Building Energy
     definition: Energy consumption and efficiency in buildings.
 
-  - identifier: ex:flexibility
+  - identifier: mopo-eu:flexibility
     prefLabel: Flexibility
     definition: Ability of energy systems to adapt to changing conditions and demands.
 
-  - identifier: ex:heat-generation
+  - identifier: mopo-eu:heat-generation
     prefLabel: Heat Generation
     definition: Production of thermal energy for heating purposes.
 
-  - identifier: ex:thermal-storage
+  - identifier: mopo-eu:thermal-storage
     prefLabel: Thermal Storage
     definition: Systems for storing thermal energy for later use.
 
-  - identifier: ex:data-processing
+  - identifier: mopo-eu:data-processing
     prefLabel: Data Processing
     definition: Transformation and analysis of raw data into usable formats.
 
-  - identifier: ex:eu-wide
+  - identifier: mopo-eu:eu-wide
     prefLabel: EU-Wide
     definition: Covering all or most European Union member states.
 
-  - identifier: ex:electricity-transmission
+  - identifier: mopo-eu:electricity-transmission
     prefLabel: Electricity Transmission
     definition: High-voltage transfer of electrical power over long distances.
 
-  - identifier: ex:cross-border
+  - identifier: mopo-eu:cross-border
     prefLabel: Cross-Border
     definition: Spanning across national or administrative boundaries.
 
-  - identifier: ex:interconnector
+  - identifier: mopo-eu:interconnector
     prefLabel: Interconnector
     definition: Infrastructure linking electricity transmission systems between regions or countries.
 
-  - identifier: ex:pecd1
+  - identifier: mopo-eu:pecd1
     prefLabel: PECD1
     definition: Pan-European Climate Database region 1.
 
-  - identifier: ex:mopo
+  - identifier: mopo-eu:mopo
     prefLabel: Mopo
     definition: Comprehensive, fast, user-friendly and thoroughly validated open-source energy system planning framework.
 
-  - identifier: ex:eu-27
+  - identifier: mopo-eu:eu-27
     prefLabel: EU-27
     definition: European Union with 27 member states (post-Brexit).
 
-  - identifier: ex:spineopt
+  - identifier: mopo-eu:spineopt
     prefLabel: SpineOpt
     definition: Flexible energy system optimization framework within the Spine Toolbox.
 
-  - identifier: ex:workflow
+  - identifier: mopo-eu:workflow
     prefLabel: Workflow
     definition: Automated sequence of data processing and modeling steps.
 
@@ -428,13 +404,13 @@ metrics:
 
 qualityMeasurements:
   - identifier: qm:pan-european-completeness
-    computedOn: zenodo:10.5281/zenodo.18593680
+    computedOn: mopo-eu:10.5281/zenodo.18593680
     isMeasurementOf: metric:completeness
     value: 0.95
     generatedAtTime: 2026-02-11
 
   - identifier: qm:vre-climate-completeness
-    computedOn: zenodo:10.5281/zenodo.18549865
+    computedOn: mopo-eu:10.5281/zenodo.18549865
     isMeasurementOf: metric:completeness
     value: 0.98
     generatedAtTime: 2026-02-11
