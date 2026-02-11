@@ -1,106 +1,476 @@
 dataCatalog:
   identifier: mopo-eu:Mopo_Data_Catalog_of_the_Pan-European_Framework_for_Energy_System_Modeling
-  description: a test data catalog created to validate the schema
+  description: |
+    The Mopo Data Catalog of the Pan-European Framework for Energy System Modeling contains the metadata of the datasets that have been used in the demonstration of the spine-tools and spin-opt tooling modeling the the European energy system and how it is likely to change under varying climate and economic forecasts as well as different policy regimes.
   title: Mopo Data Catalog of the Pan-European Framework for Energy System Modeling
-  license: 
+  license:
     title: https://creativecommons.org/licenses/by-sa/4.0/
   publisher:
-    name: my name
-
+    name: EPRI Europe
+  contactPoint:
+    hasEmail: info@tools-for-energy-system-modelling.org
+  status: draft
+  issued: 2026-02-11
 
 datasets:
-  - identifier: ex:herrcgre
-    title: test dataset
+  - identifier: zenodo:10.5281/zenodo.18593680
+    title: Pan-European Dataset for Energy System Planning
+    description: |
+      Comprehensive dataset for pan-European energy system planning covering sectors including Variable Renewable Energy, Hydro, Biomass, Energy conversion and storage, Electricity transmission, Methane and hydrogen, Cargo transport, Industry (chemicals, glass, fertilisers, refineries, cement, steel), Buildings (heating and cooling), and Transport. The dataset is designed to be opened through SpineToolbox.
     publisher:
-      name : my name
-    contactPoint: 
-      hasEmail: my.name@example.com
-    status: draft
-    theme:
-      - ex:abc
-      - ex:bcd 
-      - ex:def
+      name: EPRI Europe DAC
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-10
+    version: v0.1
+    status: published
     license:
-      title: "cc-by 4.0"
-    temporal:
-      hasBeginning: 2025-01-01
-      hasEnd: 2025-12-31  
-    inSeries: ex:abcde
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:energy
+      - ex:pan-european
+      - ex:spine-toolbox
     hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:pan-european-dataset-zip
+        title: Pan-European_Dataset.zip
+        accessURL: https://zenodo.org/api/records/18593680/files/Pan-European_Dataset.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18549865
+    title: Mopo pan-European VRE data - Climate change projections
+    description: |
+      Simulated hourly wind and solar PV generation time series for pan-European energy system modeling based on climate projections from two models (MPI-ESM1-2-HR and EC-Earth3) under two scenarios (SSP2-4.5 and SSP5-8.5). Covers 2015-2100 at hourly resolution.
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-09
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:solar-power
+      - ex:wind-power
+      - ex:climate-change
+      - ex:pan-european
+    wasDerivedFrom:
+      - zenodo:10.5281/zenodo.17950647
+    hasPolicy: plcy:open-information-policy
+    temporal:
+      hasBeginning: 2015-01-01
+      hasEnd: 2100-12-31
+    distribution:
+      - identifier: dist:vre-climate-projections-zip
+        title: Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip
+        accessURL: https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18505234
+    title: MopoHeatSectorDataProcessing output
+    description: |
+      Output from MopoHeatSectorDataProcessing containing heat pump COP timeseries, building heating/cooling demand timeseries, heat storage parameters, heating technology parameters, and capacity estimations for European building stock.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-06
+    version: v0.5.3
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:building-stock
+      - ex:heat-demand
+      - ex:district-heating
+      - ex:europe
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:heat-sector-output-zip
+        title: output.zip
+        accessURL: https://zenodo.org/api/records/18505234/files/output.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18482337
+    title: Cost model for carbon dioxide and hydrogen derivatives land and sea transport
+    description: |
+      Cost models for the transportation of hydrogen and its derivatives as well as carbon dioxide, implemented in MS Excel. Includes separate files for road and ship transportation.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-04
+    version: v0.9
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by-sa/4.0/
+    theme:
+      - ex:transport
+      - ex:hydrogen
+      - ex:carbon-dioxide
+      - ex:cost-model
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:transport-cost-zip
+        title: transportcost_v0.9.zip
+        accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18253406
+    title: vttresearch/ArchetypeBuildingModel v2.9.1
+    description: |
+      Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-15
+    version: v2.9.1
+    status: published
+    license:
+      title: https://opensource.org/licenses/MIT
+    theme:
+      - ex:building-stock
+      - ex:energy-modelling
+      - ex:building-energy
+      - ex:flexibility
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:archetype-building-model-zip
+        title: ArchetypeBuildingModel-v2.9.1.zip
+        accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18253094
+    title: spine-tools/MopoHeatSectorDataProcessing v0.5.2
+    description: |
+      Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing heat sector data including building stock, heat-only generation, and thermal storage data.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-15
+    version: v0.5.2
+    status: published
+    license:
+      title: https://opensource.org/licenses/MIT
+    theme:
+      - ex:building-stock
+      - ex:heat-generation
+      - ex:thermal-storage
+      - ex:data-processing
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:heat-sector-processing-zip
+        title: MopoHeatSectorDataProcessing-v0.5.2.zip
+        accessURL: https://zenodo.org/api/records/18253094/files/spine-tools/MopoHeatSectorDataProcessing-v0.5.2.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.18252929
+    title: spine-tools/AmBIENCe2ABM v1.1.1
+    description: |
+      Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing EU-wide building stock input data for ArchetypeBuildingModel.jl.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-15
+    version: v1.1.1
+    status: published
+    license:
+      title: https://opensource.org/licenses/MIT
+    theme:
+      - ex:building-stock
+      - ex:data-processing
+      - ex:eu-wide
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:ambience2abm-zip
+        title: AmBIENCe2ABM-v1.1.1.zip
+        accessURL: https://zenodo.org/api/records/18252929/files/spine-tools/AmBIENCe2ABM-v1.1.1.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.17950648
+    title: Mopo pan-European VRE data
+    description: |
+      Simulated hourly wind and solar PV generation time series for pan-European energy system modeling. Includes VRE costs, estimated greenfield installation potentials, and installed VRE capacities for 2020 and 2025.
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-01-13
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:solar-power
+      - ex:wind-power
+      - ex:pan-european
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:vre-data-zip
+        title: Mopo_VRE_data_pan-European_to_Zenodo_2026.zip
+        accessURL: https://zenodo.org/api/records/17950648/files/Mopo_VRE_data_pan-European_to_Zenodo_2026.zip/content
+        format: application/zip
+
+  - identifier: zenodo:10.5281/zenodo.14501623
+    title: Electricity Transmission Data for the European Case Study
+    description: |
+      Cross-border transmission (interconnector) data between countries in the PECD1 region. Includes existing transmission capacities and expansion candidates for electricity transmission covering 2030-2050.
+    publisher:
+      name: University College Dublin
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2024-12-16
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:electricity-transmission
+      - ex:cross-border
+      - ex:interconnector
+      - ex:pecd1
+    hasPolicy: plcy:open-information-policy
+    temporal:
+      hasBeginning: 2030-01-01
+      hasEnd: 2050-12-31
+    distribution:
+      - identifier: dist:transmission-aggregated-xlsx
+        title: Power_Links_PECD1_Potentials_Aggregated.xlsx
+        accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_Aggregated.xlsx/content
+        format: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      - identifier: dist:transmission-by-year-xlsx
+        title: Power_Links_PECD1_Potentials_by_Year.xlsx
+        accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_by_Year.xlsx/content
+        format: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+  - identifier: zenodo:10.5281/zenodo.14282855
+    title: Mopo AmBIENCE2ABM Demo
+    description: |
+      Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2024-12-05
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - ex:mopo
+      - ex:eu-27
+      - ex:building-stock
+      - ex:spineopt
+      - ex:workflow
+    hasPolicy: plcy:open-information-policy
+    distribution:
+      - identifier: dist:ambience2abm-demo-zip
+        title: Mopo_AmBIENCe2ABM_demo.zip
+        accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
+        format: application/zip
 
 concepts:
-  - prefLabel: energy
-    identifier: ex:abc
-    definition: energy is energy
-    altLabel: juice
-  - prefLabel: test
-    identifier: ex:bcd
-    definition: test is just for testing
-    altLabel: practice  
-  - prefLabel: data
-    identifier: ex:def
-    definition: data is plural of datum
-    altLabel: information (leave a comment ;-))  
+  - identifier: ex:energy
+    prefLabel: Energy
+    definition: Energy resources and systems for power generation, transmission, and consumption.
+
+  - identifier: ex:pan-european
+    prefLabel: Pan-European
+    definition: Covering the entire European region or multiple European countries.
+
+  - identifier: ex:spine-toolbox
+    prefLabel: Spine Toolbox
+    definition: Open-source energy system modeling framework and toolset.
+
+  - identifier: ex:solar-power
+    prefLabel: Solar Power
+    definition: Electricity generated from sunlight using photovoltaic cells or concentrated solar power.
+    altLabel: PV
+
+  - identifier: ex:wind-power
+    prefLabel: Wind Power
+    definition: Electricity generated from wind using turbines.
+
+  - identifier: ex:climate-change
+    prefLabel: Climate Change
+    definition: Long-term shifts in global temperatures and weather patterns.
+
+  - identifier: ex:building-stock
+    prefLabel: Building Stock
+    definition: The aggregate of buildings in a given region, including their characteristics and energy performance.
+
+  - identifier: ex:heat-demand
+    prefLabel: Heat Demand
+    definition: Energy required for space heating and hot water in buildings.
+
+  - identifier: ex:district-heating
+    prefLabel: District Heating
+    definition: Centralized heat distribution system serving multiple buildings.
+
+  - identifier: ex:europe
+    prefLabel: Europe
+    definition: The continent of Europe or European Union member states.
+
+  - identifier: ex:transport
+    prefLabel: Transport
+    definition: Movement of goods and people, including infrastructure and vehicles.
+
+  - identifier: ex:hydrogen
+    prefLabel: Hydrogen
+    definition: Hydrogen as an energy carrier and fuel.
+
+  - identifier: ex:carbon-dioxide
+    prefLabel: Carbon Dioxide
+    definition: CO2 as a greenhouse gas and substance for transport and storage.
+    altLabel: CO2
+
+  - identifier: ex:cost-model
+    prefLabel: Cost Model
+    definition: Economic model for estimating costs of technologies, fuels, or infrastructure.
+
+  - identifier: ex:energy-modelling
+    prefLabel: Energy Modelling
+    definition: Computational simulation and analysis of energy systems.
+
+  - identifier: ex:building-energy
+    prefLabel: Building Energy
+    definition: Energy consumption and efficiency in buildings.
+
+  - identifier: ex:flexibility
+    prefLabel: Flexibility
+    definition: Ability of energy systems to adapt to changing conditions and demands.
+
+  - identifier: ex:heat-generation
+    prefLabel: Heat Generation
+    definition: Production of thermal energy for heating purposes.
+
+  - identifier: ex:thermal-storage
+    prefLabel: Thermal Storage
+    definition: Systems for storing thermal energy for later use.
+
+  - identifier: ex:data-processing
+    prefLabel: Data Processing
+    definition: Transformation and analysis of raw data into usable formats.
+
+  - identifier: ex:eu-wide
+    prefLabel: EU-Wide
+    definition: Covering all or most European Union member states.
+
+  - identifier: ex:electricity-transmission
+    prefLabel: Electricity Transmission
+    definition: High-voltage transfer of electrical power over long distances.
+
+  - identifier: ex:cross-border
+    prefLabel: Cross-Border
+    definition: Spanning across national or administrative boundaries.
+
+  - identifier: ex:interconnector
+    prefLabel: Interconnector
+    definition: Infrastructure linking electricity transmission systems between regions or countries.
+
+  - identifier: ex:pecd1
+    prefLabel: PECD1
+    definition: Pan-European Climate Database region 1.
+
+  - identifier: ex:mopo
+    prefLabel: Mopo
+    definition: Comprehensive, fast, user-friendly and thoroughly validated open-source energy system planning framework.
+
+  - identifier: ex:eu-27
+    prefLabel: EU-27
+    definition: European Union with 27 member states (post-Brexit).
+
+  - identifier: ex:spineopt
+    prefLabel: SpineOpt
+    definition: Flexible energy system optimization framework within the Spine Toolbox.
+
+  - identifier: ex:workflow
+    prefLabel: Workflow
+    definition: Automated sequence of data processing and modeling steps.
 
 series:
-  - identifier: ex:abcde
-    title: all the datasets by this publisher
+  - identifier: series:mopo-datasets
+    title: Mopo Project Datasets
     publisher:
-      name: My name
+      name: Mopo Consortium
+    description: Collection of datasets produced by the Mopo project for pan-European energy system modeling.
+
+  - identifier: series:vre-data
+    title: Variable Renewable Energy Data Series
+    publisher:
+      name: Technical University of Denmark
+    description: Time series data for wind and solar power generation across Europe.
+
+  - identifier: series:building-stock
+    title: Building Stock Data Series
+    publisher:
+      name: VTT Technical Research Centre of Finland
+    description: Datasets related to European building stock energy modeling and demand calculation.
 
 metrics:
-  - identifier: ex:fkrhkqewjewrc
-    prefLabel: example metric
-    definition: an example of a data quality metric
+  - identifier: metric:completeness
+    prefLabel: Completeness
+    definition: The degree to which all required data is present in the dataset.
     expectedDataType: xsd:float
     inDimension: Completeness
 
+  - identifier: metric:accessibility
+    prefLabel: Accessibility
+    definition: The ease with which data can be accessed and retrieved.
+    expectedDataType: xsd:float
+    inDimension: Accessibility
+
+  - identifier: metric:timeliness
+    prefLabel: Timeliness
+    definition: The degree to which data is up-to-date and available when needed.
+    expectedDataType: xsd:float
+    inDimension: Currentness
 
 qualityMeasurements:
-  - identifier: ex:sfasdggfvrln
-    computedOn: ex:herrcgre
-    isMeasurementOf: ex:fkrhkqewjewrc
-    generatedAtTime: 2025-04-22
-    value: 0.9
+  - identifier: qm:pan-european-completeness
+    computedOn: zenodo:10.5281/zenodo.18593680
+    isMeasurementOf: metric:completeness
+    value: 0.95
+    generatedAtTime: 2026-02-11
+
+  - identifier: qm:vre-climate-completeness
+    computedOn: zenodo:10.5281/zenodo.18549865
+    isMeasurementOf: metric:completeness
+    value: 0.98
+    generatedAtTime: 2026-02-11
 
 policies:
   - uid: plcy:open-information-policy
-    title: open information policy
+    title: Open Information Policy
     description: |
-      Open Information policy for the project.  
+      Open Information policy for the Mopo project.
       It ensures that data is Findable, Accessible, Interoperable, and Reusable (FAIR).
     permission:
       - uid: plcy:open-info-access
-        description: |
-          Allows any consumer to access the data.
+        description: Allows any consumer to access the data.
         action: access
-        assignee: 
-        - Data Consumer
+        assignee:
+          - Data Consumer
     obligation:
-      # Duty: register the data in a catalog
       - uid: plcy:register-in-catalog
         description: |
           The publisher must register the data in the project catalog so it is findable.
         action: register
         assignee:
           - Data Provider
-     # Duty: provide an open licence
       - uid: plcy:provide-license
         description: |
-          The publisher must provide an open‑source or Creative‑Commons licence
+          The publisher must provide an open-source or Creative-Commons licence
           describing how the data may be used.
         action: provide
         assignee:
           - Data Provider
-     # Duty: provide a rights statement
       - uid: plcy:provide-rights-statement
         description: |
-          The publisher must provide a rights statement (e.g., from rightsstatements.org)
-          indicating any intellectual‑property or copy rights.
+          The publisher must provide a rights statement indicating any intellectual-property or copy rights.
         action: provide
         assignee:
           - Data Provider
-     # Duty: make the data accessible via an appropriate protocol
       - uid: plcy:make-accessible
         description: |
           The provider must make the data available through an appropriate
@@ -108,5 +478,3 @@ policies:
         action: make_available
         assignee:
           - Data Provider
-  
-
