@@ -51,7 +51,7 @@ datasets:
       - ex:spine-toolbox
     hasPolicy: plcy:open-information-policy
     distribution:
-      - identifier: dist:pan-european-dataset-zip
+      - identifier: mopo-eu:pan-european-dataset-zip
         title: Pan-European_Dataset.zip
         accessURL: https://zenodo.org/api/records/18593680/files/Pan-European_Dataset.zip/content
         format: application/zip    
