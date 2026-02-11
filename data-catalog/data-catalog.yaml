@@ -69,7 +69,6 @@ datasets:
           Onshore wind: 9 specific technologies plus an “existing” configuration.
 
       “Existing” runs represent installations characteristic of 2020 in the analyzed regions, while “specific technology” runs represent possible future VRE installations. See https://doi.org/10.5281/zenodo.17950647 for more details about the simulated VRE technologies and regions.
-
     publisher:
       name: Technical University of Denmark
     contactPoint:
@@ -83,9 +82,6 @@ datasets:
       - mopo-eu:wind-power
       - mopo-eu:climate-change
       - mopo-eu:pan-european
-    # wasDerivedFrom:
-    #   - mopo-eu:10.5281/zenodo.17950647
-    # hasPolicy: plcy:open-information-policy
     temporal:
       hasBeginning: 2015-01-01
       hasEnd: 2100-12-31
