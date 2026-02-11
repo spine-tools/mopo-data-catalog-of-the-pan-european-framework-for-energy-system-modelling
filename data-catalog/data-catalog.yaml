@@ -13,24 +13,6 @@ dataCatalog:
   issued: 2026-02-11
 
 datasets:
-  - identifier: mopo-eu:herrcgre
-    title: test dataset
-    publisher:
-      name : my name
-    contactPoint: 
-      hasEmail: my.name@example.com
-    status: draft
-    theme:
-      - ex:abc
-      - ex:bcd 
-      - ex:def
-    license:
-      title: "cc-by 4.0"
-    temporal:
-      hasBeginning: 2025-01-01
-      hasEnd: 2025-12-31  
-    inSeries: ex:abcde
-    hasPolicy: plcy:open-information-policy
 
   - identifier: mopo-eu:10.5281/zenodo.18593680
     title: Pan-European Dataset for Energy System Planning
@@ -46,9 +28,9 @@ datasets:
     license:
       title: https://creativecommons.org/licenses/by/4.0/
     theme:
-      - ex:energy
-      - ex:pan-european
-      - ex:spine-toolbox
+      - mopo-eu:energy
+      - mopo-eu:pan-european
+      - mopo-eu:spine-toolbox
     hasPolicy: plcy:open-information-policy
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
@@ -59,7 +41,7 @@ datasets:
 
 
 series:
-  - identifier: ex:abcde
+  - identifier: mopo-eu:abcde
     title: all the datasets by this publisher
     publisher:
       name: My name
@@ -186,7 +168,7 @@ concepts:
 
 
 metrics:
-  - identifier: ex:fkrhkqewjewrc
+  - identifier: mopo-eu:fkrhkqewjewrc
     prefLabel: example metric
     definition: an example of a data quality metric
     expectedDataType: xsd:float
@@ -194,9 +176,9 @@ metrics:
 
 
 qualityMeasurements:
-  - identifier: ex:sfasdggfvrln
-    computedOn: ex:herrcgre
-    isMeasurementOf: ex:fkrhkqewjewrc
+  - identifier: mopo-eu:sfasdggfvrln
+    computedOn: mopo-eu:herrcgre
+    isMeasurementOf: mopo-eu:fkrhkqewjewrc
     generatedAtTime: 2025-04-22
     value: 0.9
 
