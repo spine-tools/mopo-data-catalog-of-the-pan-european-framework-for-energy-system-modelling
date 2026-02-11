@@ -168,7 +168,7 @@ concepts:
     prefLabel: PECD1
     definition: Pan-European Climate Database region 1.
 
-  - identifier: emopo-eux:mopo
+  - identifier: mopo-eu:mopo
     prefLabel: Mopo
     definition: Comprehensive, fast, user-friendly and thoroughly validated open-source energy system planning framework.
 
