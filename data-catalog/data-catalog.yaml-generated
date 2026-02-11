@@ -220,30 +220,30 @@ datasets:
   #       accessURL: https://zenodo.org/api/records/14501623/files/Power_Links_PECD1_Potentials_by_Year.xlsx/content
   #       format: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
-  - identifier: mopo-eu:10.5281/zenodo.14282855
-    title: Mopo AmBIENCE2ABM Demo
-    description: |
-      Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
-    publisher:
-      name: VTT Technical Research Centre of Finland
-    contactPoint:
-      hasEmail: info@tools-for-energy-system-modelling.org
-    issued: 2024-12-05
-    status: published
-    license:
-      title: https://creativecommons.org/licenses/by/4.0/
-    theme:
-      - mopo-eu:mopo
-      - mopo-eu:eu-27
-      - mopo-eu:building-stock
-      - mopo-eu:spineopt
-      - mopo-eu:workflow
-    hasPolicy: plcy:open-information-policy
-    distribution:
-      - identifier: mopo-eu:ambience2abm-demo-zip
-        title: Mopo_AmBIENCe2ABM_demo.zip
-        accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
-        format: zip/csv
+  # - identifier: mopo-eu:10.5281/zenodo.14282855
+  #   title: Mopo AmBIENCE2ABM Demo
+  #   description: |
+  #     Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2024-12-05
+  #   status: published
+  #   license:
+  #     title: https://creativecommons.org/licenses/by/4.0/
+  #   theme:
+  #     - mopo-eu:mopo
+  #     - mopo-eu:eu-27
+  #     - mopo-eu:building-stock
+  #     - mopo-eu:spineopt
+  #     - mopo-eu:workflow
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:ambience2abm-demo-zip
+  #       title: Mopo_AmBIENCe2ABM_demo.zip
+  #       accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
+  #       format: zip/csv
 
 concepts:
   - identifier: mopo-eu:energy

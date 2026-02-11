@@ -524,20 +524,20 @@ concepts:
     definition: Automated sequence of data processing and modeling steps.
 
 
-metrics:
-  - identifier: mopo-eu:fkrhkqewjewrc
-    prefLabel: example metric
-    definition: an example of a data quality metric
-    expectedDataType: xsd:float
-    inDimension: Completeness
+# metrics:
+#   - identifier: mopo-eu:fkrhkqewjewrc
+#     prefLabel: example metric
+#     definition: an example of a data quality metric
+#     expectedDataType: xsd:float
+#     inDimension: Completeness
 
 
-qualityMeasurements:
-  - identifier: mopo-eu:sfasdggfvrln
-    computedOn: mopo-eu:herrcgre
-    isMeasurementOf: mopo-eu:fkrhkqewjewrc
-    generatedAtTime: 2025-04-22
-    value: 0.9
+# qualityMeasurements:
+#   - identifier: mopo-eu:sfasdggfvrln
+#     computedOn: mopo-eu:herrcgre
+#     isMeasurementOf: mopo-eu:fkrhkqewjewrc
+#     generatedAtTime: 2025-04-22
+#     value: 0.9
 
 policies:
   - uid: plcy:open-information-policy
