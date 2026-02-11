@@ -105,22 +105,22 @@ datasets:
       Hourly timeseries for different heat pump coefficients of performance for different countries, calculated using the Mopo AmBIENCE2ABM Demo. Note that the COP approximation uses a rather crude constant exergy Carnot method.
       Contains 5 weather years:
 
-          1995
-          2008
-          2009
-          2012
-          2015
+      . 1995
+      . 2008
+      . 2009
+      . 2012
+      . 2015
 
       Contains 8 different COP timeseries:
 
-          `A2AHP-air` space heating using an air-to-air heat pump (`A2AHP`).
-          `A2AHP-cooling` space cooling using an air-to-air heat pump.
-          `A2WHP-DHW` domestic hot water (`DHW`) heating using an air-to-water heat pump (`A2WHP`).
-          `A2WHP-floor` space heating using an air-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
-          `A2WHP-radiators` space heating using an air-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
-          `G2WHP-DHW` domestic hot water heating using an ground-to-water heat pump (`G2WHP`).
-          `G2WHP-floor` space heating using an ground-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
-          `G2WHP-radiators` space heating using an ground-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
+      . `A2AHP-air` space heating using an air-to-air heat pump (`A2AHP`).
+      . `A2AHP-cooling` space cooling using an air-to-air heat pump.
+      . `A2WHP-DHW` domestic hot water (`DHW`) heating using an air-to-water heat pump (`A2WHP`).
+      . `A2WHP-floor` space heating using an air-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
+      . `A2WHP-radiators` space heating using an air-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
+      . `G2WHP-DHW` domestic hot water heating using an ground-to-water heat pump (`G2WHP`).
+      . `G2WHP-floor` space heating using an ground-to-water heat pump assuming a low-temperature heat distribution system (e.g. hydronic floor heating).
+      . `G2WHP-radiators` space heating using an ground-to-water heat pump assuming a medium-temperature heat distribution system (e.g. modern hydronic radiators).
 
       Produced by `cop_export.ipynb` with more details on how the data is reorganized from the raw ArchetypeBuildingModel output.
       === `demand-timeseries/*.csv`
