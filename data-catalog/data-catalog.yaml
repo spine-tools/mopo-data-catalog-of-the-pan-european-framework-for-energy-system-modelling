@@ -86,7 +86,7 @@ datasets:
       hasBeginning: 2015-01-01
       hasEnd: 2100-12-31
     distribution:
-      - identifier: dist:vre-climate-projections-zip
+      - identifier: mopo-eu:vre-climate-projections-zip
         title: Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip
         accessURL: https://zenodo.org/api/records/18549865/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Climate_projections.zip/content
         format: zip/csv 
