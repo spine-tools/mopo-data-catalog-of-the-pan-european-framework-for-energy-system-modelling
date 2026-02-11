@@ -221,30 +221,30 @@ datasets:
         accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
         format: zip/xlsx
 
-  - identifier: mopo-eu:10.5281/zenodo.18253406
-    title: vttresearch/ArchetypeBuildingModel v2.9.1
-    description: |
-      Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
-    publisher:
-      name: VTT Technical Research Centre of Finland
-    contactPoint:
-      hasEmail: info@tools-for-energy-system-modelling.org
-    issued: 2026-01-15
-    version: v2.9.1
-    status: published
-    license:
-      title: https://opensource.org/licenses/MIT
-    theme:
-      - mopo-eu:building-stock
-      - mopo-eu:energy-modelling
-      - mopo-eu:building-energy
-      - mopo-eu:flexibility
-    hasPolicy: plcy:open-information-policy
-    distribution:
-      - identifier: mopo-eu:archetype-building-model-zip
-        title: ArchetypeBuildingModel-v2.9.1.zip
-        accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
-        format: zip/python/julia/json
+  # - identifier: mopo-eu:10.5281/zenodo.18253406
+  #   title: vttresearch/ArchetypeBuildingModel v2.9.1
+  #   description: |
+  #     Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
+  #   publisher:
+  #     name: VTT Technical Research Centre of Finland
+  #   contactPoint:
+  #     hasEmail: info@tools-for-energy-system-modelling.org
+  #   issued: 2026-01-15
+  #   version: v2.9.1
+  #   status: published
+  #   license:
+  #     title: https://opensource.org/licenses/MIT
+  #   theme:
+  #     - mopo-eu:building-stock
+  #     - mopo-eu:energy-modelling
+  #     - mopo-eu:building-energy
+  #     - mopo-eu:flexibility
+  #   hasPolicy: plcy:open-information-policy
+  #   distribution:
+  #     - identifier: mopo-eu:archetype-building-model-zip
+  #       title: ArchetypeBuildingModel-v2.9.1.zip
+  #       accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
+  #       format: zip/python/julia/json
 
   # - identifier: mopo-eu:10.5281/zenodo.18253094
   #   title: spine-tools/MopoHeatSectorDataProcessing v0.5.2
