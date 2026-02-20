@@ -57,6 +57,9 @@ datasets:
       - mopo-eu:10.5281/zenodo.17950648
       - mopo-eu:10.5281/zenodo.18590390
       - mopo-eu:10.5281/zenodo.18482337
+      - mopo-eu:10.5281/zenodo.18632738
+      - mopo-eu:10.5281/zenodo.18633158
+      - mopo-eu:10.5281/zenodo.18630252
 
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
@@ -472,6 +475,30 @@ datasets:
         accessURL: https://zenodo.org/api/records/18633158/files/technology_catalogue_ind_nuts0_nuts3_no_HC_NH3.xlsx/content
         format: xlsx
 
+  - identifier: mopo-eu:10.5281/zenodo.18630252
+    title: Mopo Industry data for Switzerland, Norway and UK
+    description: |
+      The Mopo Industry data for Switzerland, Norway and UK is used for creating the full Mopo industry component covering EU30
+    publisher:
+      name: Flemish Institute for Technological Research
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-13
+    version: v1
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:industry
+      - mopo-eu:switzerland
+      - mopo-eu:norway
+      - mopo-eu:united-kingdom
+    distribution:
+      - identifier: mopo-eu:industry-ch-no-uk-xlsx
+        title: Mopo_IndustryData_CH_NO_UK_DRAFTupload260213.xlsx
+        accessURL: https://zenodo.org/api/records/18630252/files/Mopo_IndustryData_CH_NO_UK_DRAFTupload260213.xlsx/content
+        format: xlsx
+
   # - identifier: mopo-eu:10.5281/zenodo.14282855
   #   title: Mopo AmBIENCE2ABM Demo
   #   description: |
@@ -552,6 +579,18 @@ concepts:
   - identifier: mopo-eu:europe
     prefLabel: Europe
     definition: The continent of Europe or European Union member states.
+
+  - identifier: mopo-eu:switzerland
+    prefLabel: Switzerland
+    definition: Switzerland as a country or region.
+
+  - identifier: mopo-eu:norway
+    prefLabel: Norway
+    definition: Norway as a country or region.
+
+  - identifier: mopo-eu:united-kingdom
+    prefLabel: United Kingdom
+    definition: United Kingdom as a country or region.
 
   - identifier: mopo-eu:transport
     prefLabel: Transport
