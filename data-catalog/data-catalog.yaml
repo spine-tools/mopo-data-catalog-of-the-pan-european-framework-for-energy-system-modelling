@@ -399,6 +399,48 @@ datasets:
         accessURL: https://zenodo.org/api/records/18590390/files/Gas_Sectors_Dataset_WithSource.xlsx/content
         format: xlsx
 
+  - identifier: mopo-eu:10.5281/zenodo.18632738
+    title: Mopo Pan-European Hydropower Data
+    description: |
+      This dataset includes:
+
+      - Reconstructed hydropower inflow from 1980 to 2023 for electricity areas for Pan-European countries, including weekly reservoir inflow (MWh) and daily run-of-river inflow (MWh).
+        - Reservoir Inflow available areas: ['AL', 'AT', 'BA', 'BG', 'CH', 'ES', 'FI', 'FR', 'GR', 'HR', 'ITN1', 'ME', 'MK', 'NO1', 'NO2', 'NO3', 'NO4', 'NO5', 'PT', 'RO', 'RS', 'SE1', 'SE2', 'SE3', 'SE4', 'UA']
+        - Run-of-river inflow available areas: ['AT', 'BA', 'BE', 'BG', 'CH', 'CZ', 'DE', 'ES', 'FR', 'HR', 'IE', 'ITCN', 'ITCS', 'ITN1', 'ITCA', 'ITSI', 'LT', 'LV', 'NO1', 'NO2', 'NO3', 'NO4', 'NO5', 'PL', 'PT', 'RO', 'RS', 'SI', 'UK']
+      - Equivalent reservoir-based and pumped storage hydropower parameters for each area.
+        - Reservoir based available areas: ['AL', 'AT', 'BA', 'BG', 'CH', 'ES', 'FI', 'FR', 'GR', 'HR', 'ITN1', 'ME', 'MK', 'NO1', 'NO2', 'NO3', 'NO4', 'NO5', 'PT', 'RO', 'RS', 'SE1', 'SE2', 'SE3', 'SE4', 'UA']
+        - Pumped-storage available areas: ['NO2', 'NO5', 'ES', 'FR', 'CH','ITN1','AT','BE','LT','PT','UK','DE','CZ','PL']
+
+      Model Suggestions:
+      - reservoir-based: note that UA, AL, BA parameters and inflow are scaled based on neighbouring countries, due to the lack of data
+      - pumped storage: efficiency factor applies to the consumption and thus, consumption * efficiency factor will be stored in the reservoir
+      - run-of-river hydropower inflow can be assumed as generation
+    publisher:
+      name: KTH Royal Institute of Technology
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-20
+    version: v1
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:hydropower
+      - mopo-eu:pan-european
+      - mopo-eu:aggregation
+    temporal:
+      hasBeginning: 1980-01-01
+      hasEnd: 2023-12-31
+    distribution:
+      - identifier: mopo-eu:hydro-parameters-xlsx
+        title: EU_parameters_data_20260215_version1.xlsx
+        accessURL: https://zenodo.org/api/records/18632738/files/EU_parameters_data_20260215_version1.xlsx/content
+        format: xlsx
+      - identifier: mopo-eu:hydro-inflow-zip
+        title: Inflow 1980-2023.zip
+        accessURL: https://zenodo.org/api/records/18632738/files/Inflow%201980-2023.zip/content
+        format: zip
+
   # - identifier: mopo-eu:10.5281/zenodo.14282855
   #   title: Mopo AmBIENCE2ABM Demo
   #   description: |
@@ -564,6 +606,14 @@ concepts:
   - identifier: mopo-eu:network
     prefLabel: Network
     definition: Infrastructure for transporting energy, gas, or other commodities between locations.
+
+  - identifier: mopo-eu:hydropower
+    prefLabel: Hydropower
+    definition: Electricity generated from water flow using turbines, including reservoir, run-of-river, and pumped storage.
+
+  - identifier: mopo-eu:aggregation
+    prefLabel: Aggregation
+    definition: Process of combining data from multiple sources into a unified dataset.
 
 
 # metrics:
