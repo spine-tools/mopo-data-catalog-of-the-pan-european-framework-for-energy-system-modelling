@@ -60,6 +60,7 @@ datasets:
       - mopo-eu:10.5281/zenodo.18632738
       - mopo-eu:10.5281/zenodo.18633158
       - mopo-eu:10.5281/zenodo.18630252
+      - mopo-eu:10.5281/zenodo.18624218
 
     distribution:
       - identifier: mopo-eu:pan-european-dataset-zip
@@ -226,56 +227,6 @@ datasets:
         title: transportcost_v0.9.zip
         accessURL: https://zenodo.org/api/records/18482337/files/transportcost_v0.9.zip/content
         format: zip/xlsx
-
-  # - identifier: mopo-eu:10.5281/zenodo.18253406
-  #   title: vttresearch/ArchetypeBuildingModel v2.9.1
-  #   description: |
-  #     Latest version for revised Zenodo integration. ArchetypeBuildingModel is a building stock energy modelling tool.
-  #   publisher:
-  #     name: VTT Technical Research Centre of Finland
-  #   contactPoint:
-  #     hasEmail: info@tools-for-energy-system-modelling.org
-  #   issued: 2026-01-15
-  #   version: v2.9.1
-  #   status: published
-  #   license:
-  #     title: https://opensource.org/licenses/MIT
-  #   theme:
-  #     - mopo-eu:building-stock
-  #     - mopo-eu:energy-modelling
-  #     - mopo-eu:building-energy
-  #     - mopo-eu:flexibility
-  #   hasPolicy: plcy:open-information-policy
-  #   distribution:
-  #     - identifier: mopo-eu:archetype-building-model-zip
-  #       title: ArchetypeBuildingModel-v2.9.1.zip
-  #       accessURL: https://zenodo.org/api/records/18253406/files/vttresearch/ArchetypeBuildingModel-v2.9.1.zip/content
-  #       format: zip/python/julia/json
-
-  # - identifier: mopo-eu:10.5281/zenodo.18253094
-  #   title: spine-tools/MopoHeatSectorDataProcessing v0.5.2
-  #   description: |
-  #     Archived version for the Mopo D2.2 deliverable. Computational notebooks for processing heat sector data including building stock, heat-only generation, and thermal storage data.
-  #   publisher:
-  #     name: VTT Technical Research Centre of Finland
-  #   contactPoint:
-  #     hasEmail: info@tools-for-energy-system-modelling.org
-  #   issued: 2026-01-15
-  #   version: v0.5.2
-  #   status: published
-  #   license:
-  #     title: https://opensource.org/licenses/MIT
-  #   theme:
-  #     - mopo-eu:building-stock
-  #     - mopo-eu:heat-generation
-  #     - mopo-eu:thermal-storage
-  #     - mopo-eu:data-processing
-  #   hasPolicy: plcy:open-information-policy
-  #   distribution:
-  #     - identifier: mopo-eu:heat-sector-processing-zip
-  #       title: MopoHeatSectorDataProcessing-v0.5.2.zip
-  #       accessURL: https://zenodo.org/api/records/18253094/files/spine-tools/MopoHeatSectorDataProcessing-v0.5.2.zip/content
-  #       format: zip/csv
 
 
 
@@ -499,38 +450,39 @@ datasets:
         accessURL: https://zenodo.org/api/records/18630252/files/Mopo_IndustryData_CH_NO_UK_DRAFTupload260213.xlsx/content
         format: xlsx
 
-  # - identifier: mopo-eu:10.5281/zenodo.14282855
-  #   title: Mopo AmBIENCE2ABM Demo
-  #   description: |
-  #     Spine Toolbox workflow demonstrating feeding SpineOpt from AmBIENCe and Hotmaps data for EU-wide building stock heating and cooling timeseries calculation. Part of a three-step Mopo building stock data processing workflow.
-  #   publisher:
-  #     name: VTT Technical Research Centre of Finland
-  #   contactPoint:
-  #     hasEmail: info@tools-for-energy-system-modelling.org
-  #   issued: 2024-12-05
-  #   status: published
-  #   license:
-  #     title: https://creativecommons.org/licenses/by/4.0/
-  #   theme:
-  #     - mopo-eu:mopo
-  #     - mopo-eu:eu-27
-  #     - mopo-eu:building-stock
-  #     - mopo-eu:spineopt
-  #     - mopo-eu:workflow
-  #   hasPolicy: plcy:open-information-policy
-  #   distribution:
-  #     - identifier: mopo-eu:ambience2abm-demo-zip
-  #       title: Mopo_AmBIENCe2ABM_demo.zip
-  #       accessURL: https://zenodo.org/api/records/14282855/files/Mopo_AmBIENCe2ABM_demo.zip/content
-  #       format: zip/csv
+  - identifier: mopo-eu:10.5281/zenodo.18624218
+    title: Baltic region dataset
+    description: |
+      The Baltic region dataset has been prepared as an INES (Interoperable Energy System) database, using a validated Spine Toolbox workflow.
 
+      == Scope (Warning: this dataset is under development, to be updated till December 2026.)
 
+      === Geographical resolution:
+      The model represents the Baltic countries (Estonia, Latvia, Lithuania) and their interconnections with neighbouring systems, using cross-border exchange data from a Pan-European model. The electrical system is captured at the country level, while the heating system is represented with more spatial granularity, distinguishing capital-city areas and additional regional zones to account for differences in heat demand and supply structures. To analyse region-specific impacts in detail, Latvia's capital heating network is divided into two subsystems. An additional NUTS-3 region is explicitly separated to reflect local constraints and development potential under local military-related restrictions.
 
-# series:
-#   - identifier: mopo-eu:abcde
-#     title: all the datasets by this publisher
-#     publisher:
-#       name: My name
+      === Temporal resolution:
+      The core modelling horizon is 2050, with simulations primarily conducted at hourly resolution to capture renewable variability and cross-sector interactions. For the region-specific scenario, time resolution is refined to 15-minute intervals, allowing more precise analysis of wind intermittency, system balancing needs, and short-term flexibility requirements.
+
+      === Sector resolution:
+      The modelling framework includes multiple energy sectors and conversion pathways: power, heating, gas, and Power-to-X (P2X) systems, buildings (space heating, hot water, efficiency measures) and transport; a comprehensive set of commodities: natural gas, biogas, hydrogen, biomass, waste, coal, oil shale/retort gas, oil products (gasoline, diesel, ethanol, biodiesel). Carbon dioxide emissions from all relevant processes are explicitly represented.
+    publisher:
+      name: Riga Technical University
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-12
+    version: v1
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:baltic-region
+      - mopo-eu:energy
+      - mopo-eu:ines
+    distribution:
+      - identifier: mopo-eu:baltic-region-sqlite
+        title: indes_db_model_input_dataset_d2_5.sqlite
+        accessURL: https://zenodo.org/api/records/18624218/files/indes_db_model_input_dataset_d2_5.sqlite/content
+        format: sqlite
 
 
 concepts:
@@ -579,6 +531,14 @@ concepts:
   - identifier: mopo-eu:europe
     prefLabel: Europe
     definition: The continent of Europe or European Union member states.
+
+  - identifier: mopo-eu:baltic-region
+    prefLabel: Baltic Region
+    definition: The Baltic region including Estonia, Latvia, and Lithuania.
+
+  - identifier: mopo-eu:ines
+    prefLabel: INES
+    definition: Interoperable Energy System data specification.
 
   - identifier: mopo-eu:switzerland
     prefLabel: Switzerland
