@@ -441,6 +441,37 @@ datasets:
         accessURL: https://zenodo.org/api/records/18632738/files/Inflow%201980-2023.zip/content
         format: zip
 
+  - identifier: mopo-eu:10.5281/zenodo.18633158
+    title: Technology catalogue Mopo
+    description: |
+      Dataset containing the technology catalogue for Mopo based on the AIDRES database, extended with data of Midden (link:https://www.pbl.nl/en/middenweb[MIDDEN: Manufacturing Industry Decarbonisation Data Exchange Network | PBL Netherlands Environmental Assessment Agency]), the GPBV database (Flanders, link:https://omgeving.vlaanderen.be/nl/omgevingsvergunning/meer/overzicht-gpbv-installaties-in-vlaanderen-industrie[Overzicht GPBV-installaties in Vlaanderen (industrie)]), EuroChlor (link:https://www.eurochlor.org/rooted-in-europe/[Rooted in Europe - Eurochlor]), JRC-IDEES (link:https://publications.jrc.ec.europa.eu/repository/handle/JRC137809[JRC-IDEES-2021: the Integrated Database of the European Energy System – Data update and technical documentation]) and PyPSA-Eur (link:https://github.com/PyPSA/pypsa-eur[PyPSA/pypsa-eur: PyPSA-Eur: A Sector-Coupled Open Optimisation Model of the European Energy System])
+    publisher:
+      name: Flemish Institute for Technological Research
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-13
+    version: v1
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:technology-catalogue
+      - mopo-eu:industry
+      - mopo-eu:energy
+    distribution:
+      - identifier: mopo-eu:tech-catalogue-nuts0-nuts3-xlsx
+        title: technology_catalogue_ind_nuts0_nuts3.xlsx
+        accessURL: https://zenodo.org/api/records/18633158/files/technology_catalogue_ind_nuts0_nuts3.xlsx/content
+        format: xlsx
+      - identifier: mopo-eu:tech-catalogue-hc-nh3-xlsx
+        title: technology_catalogue_ind_nuts0_nuts3_HC_NH3.xlsx
+        accessURL: https://zenodo.org/api/records/18633158/files/technology_catalogue_ind_nuts0_nuts3_HC_NH3.xlsx/content
+        format: xlsx
+      - identifier: mopo-eu:tech-catalogue-no-hc-nh3-xlsx
+        title: technology_catalogue_ind_nuts0_nuts3_no_HC_NH3.xlsx
+        accessURL: https://zenodo.org/api/records/18633158/files/technology_catalogue_ind_nuts0_nuts3_no_HC_NH3.xlsx/content
+        format: xlsx
+
   # - identifier: mopo-eu:10.5281/zenodo.14282855
   #   title: Mopo AmBIENCE2ABM Demo
   #   description: |
@@ -538,6 +569,14 @@ concepts:
   - identifier: mopo-eu:cost-model
     prefLabel: Cost Model
     definition: Economic model for estimating costs of technologies, fuels, or infrastructure.
+
+  - identifier: mopo-eu:technology-catalogue
+    prefLabel: Technology Catalogue
+    definition: Collection of technology parameters and specifications for energy system modeling.
+
+  - identifier: mopo-eu:industry
+    prefLabel: Industry
+    definition: Manufacturing and industrial processes and facilities.
 
   - identifier: mopo-eu:energy-modelling
     prefLabel: Energy Modelling
