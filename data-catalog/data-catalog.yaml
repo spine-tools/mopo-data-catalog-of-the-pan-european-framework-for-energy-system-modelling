@@ -450,6 +450,28 @@ datasets:
         accessURL: https://zenodo.org/api/records/18630252/files/Mopo_IndustryData_CH_NO_UK_DRAFTupload260213.xlsx/content
         format: xlsx
 
+  - identifier: mopo-eu:10.5281/zenodo.18759195
+    title: MOPO Other electricity demand
+    description: |
+      This dataset covers the other electricity demand for the MOPO project. This electricity demand covers the electricity demand that are not modelled by other component models. This was done by first modelling hourly country level electricity demand and later removing the electricity used for heating and industrial consumption.
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-24
+    version: v1.0.0
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:electricity-demand
+      - mopo-eu:pan-european
+    distribution:
+      - identifier: mopo-eu:other-electricity-demand-zip
+        title: Other electricity demand.zip
+        accessURL: https://zenodo.org/api/records/18759195/files/Other%20electricity%20demand.zip/content
+        format: zip/csv
+
   - identifier: mopo-eu:10.5281/zenodo.18624218
     title: Baltic region dataset
     description: |
@@ -604,6 +626,10 @@ concepts:
   - identifier: mopo-eu:eu-wide
     prefLabel: EU-Wide
     definition: Covering all or most European Union member states.
+
+  - identifier: mopo-eu:electricity-demand
+    prefLabel: Electricity Demand
+    definition: Electricity consumption for purposes not covered by other component models, excluding heating and industrial consumption.
 
   - identifier: mopo-eu:electricity-transmission
     prefLabel: Electricity Transmission
