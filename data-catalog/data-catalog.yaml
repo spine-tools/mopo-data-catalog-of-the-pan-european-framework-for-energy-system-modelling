@@ -472,6 +472,43 @@ datasets:
         accessURL: https://zenodo.org/api/records/18759195/files/Other%20electricity%20demand.zip/content
         format: zip/csv
 
+  - identifier: mopo-eu:10.5281/zenodo.18758467
+    title: Mopo Baltic case study VRE data
+    description: |
+      This dataset provides simulated hourly wind and solar PV generation time series used in the Mopo project for the Baltic case study. The modeling framework follows https://doi.org/10.5281/zenodo.17950647 (validated in Nayak et al. (2025)).
+
+      The file "MOPO_Baltic_polygons" shows the simulated onshore regions on a map. The offshore regions are the same as in the related pan-European data.
+
+      The following VRE technologies are simulated:
+      - Solar PV: 3 simulated PV technologies.
+      - Offshore wind: 4 specific technologies (2 bottom-fixed (FB) and 2 floating (FO)) (there is no existing offshore wind in the Baltic countries).
+      - Onshore wind: 9 specific technologies plus an "existing" configuration.
+
+      "Existing" runs represent installations characteristic of 2020 in the analyzed regions, while "specific technology" runs represent possible future VRE installations.
+
+      Compared to the pan-European runs in the Mopo project, this upload considers a higher geographical resolution for the Baltic countries. In addition, a 5 min resolution wind run is carried out to demonstrate sub-hourly simulation capabilities (see folder "WindPower_5min_run"). The 5 min resolution run considers the following technologies: Existing wind installations (only onshore for the Baltic countries) and the SP370 HH 155 offshore and SP277 HH100 onshore wind technology to represent future installations.
+    publisher:
+      name: Technical University of Denmark
+    contactPoint:
+      hasEmail: info@tools-for-energy-system-modelling.org
+    issued: 2026-02-24
+    version: v1
+    status: published
+    license:
+      title: https://creativecommons.org/licenses/by/4.0/
+    theme:
+      - mopo-eu:solar-power
+      - mopo-eu:wind-power
+      - mopo-eu:baltic-region
+      - mopo-eu:sub-hourly
+    wasDerivedFrom:
+      - mopo-eu:10.5281/zenodo.17950647
+    distribution:
+      - identifier: mopo-eu:baltic-vre-zip
+        title: Mopo_VRE_data_pan-European_to_Zenodo_2026_Baltic.zip
+        accessURL: https://zenodo.org/api/records/18758467/files/Mopo_VRE_data_pan-European_to_Zenodo_2026_Baltic.zip/content
+        format: zip
+
   - identifier: mopo-eu:10.5281/zenodo.18624218
     title: Baltic region dataset
     description: |
@@ -678,6 +715,10 @@ concepts:
   - identifier: mopo-eu:aggregation
     prefLabel: Aggregation
     definition: Process of combining data from multiple sources into a unified dataset.
+
+  - identifier: mopo-eu:sub-hourly
+    prefLabel: Sub-hourly
+    definition: Time series data with temporal resolution finer than one hour, such as 5-minute or 15-minute intervals.
 
 
 # metrics:
